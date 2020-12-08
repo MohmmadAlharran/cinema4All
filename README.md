@@ -53,7 +53,7 @@ Trailer: https://youtu.be/yHafN0M2kl0
 ![Alt text](./resources/Wunder.jpg)  
 Trailer: https://youtu.be/Ob7fPOzbmzE  
 **Fast & Furious: Hobbs & Shaw**:  
-![Alt text](./resources/Fast & Furious: Hobbs & Shaw: .jpeg)  
+![Alt text](./resources/FastandFurious.jpeg)  
 Trailer:  https://youtu.be/HZ7PAyCDwEg  
 **Tenet**:  
 ![Alt text](./resources/tenet.jpeg)  
