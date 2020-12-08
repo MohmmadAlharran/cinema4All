@@ -25,11 +25,23 @@ Drinks: small: 2€ medium: 3€ large: 3,50€
 **Description**: See a surprise movie selected by us.  
 
 **Resources**  
+  
+**Gastronomy**  
+![Alt text](./resources/Gastronomy/nachos.jpg)    
+![Alt text](./resources/Gastronomy/popcorn.jpg)    
+![Alt text](./resources/Gastronomy/photo3.jpg)    
+
+
+
+**Movies**
+
 **Joker**:  
+(Top rated)    
 ![Alt text](./resources/joker.jpg)  
 Plot: https://www.imdb.com/title/tt7286456/?ref_=nv_sr_srsg_0  
 Trailer: https://youtu.be/zAGVQLHvwOY  
 **Titanic**:  
+(Top rated)  
 ![Alt text](./resources/titanic.jpg)  
 Plot: https://www.imdb.com/title/tt0120338/?ref_=fn_al_tt_1  
 Trailer: https://youtu.be/kVrqfYjkTdQ  
@@ -61,7 +73,7 @@ Trailer:  https://youtu.be/L3pk_TBkihU
 
 **list of the webpages**  
 **Home**: home.html (landmark)  
-Main page    
+Main page should contain all pages    
 Title: Main Page  
 **Contact**:  contact.html (landmark)   
 Email and social media   
@@ -70,7 +82,7 @@ Title: Contact Us
 This page includes a short description of the company    
 Title : About Us   
 **Movies** : movies.html (landmark)   
-list of movies with basic information about the movie. e.g. actors, posters, trailer videos... etc.   
+list of movies with basic information .   
 Title: Movies  
 **Events** : events.html   
 all events with short descriptions (movie , playtime ,...)   
@@ -81,6 +93,15 @@ Title: Prices & Gastronomy
 **Impressum | AGBs**: Impressum.html (landmark)   
 These pages will include all the need legal information   
 Title:  Impressum   
+**Comming soon**: CommingSoon.html  
+The Movies wich will be released. It icludes all information about the movie. e.g. actors, posters, trailer videos, plot... etc.   
+Title: Coming soon   
+**Top rated movies** : topRated.html  
+It icludes all information about the movie. e.g. actors, posters, trailer videos, plot... etc.
+Title:Top rated  
+**FAQ***: faq.html (landmark)  
+Here will be displayed several questions which can be asked from users or which we expect to be asked.  
+Title: FAQ  
 
 
 
