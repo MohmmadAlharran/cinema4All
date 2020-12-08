@@ -44,7 +44,7 @@ Trailer: https://www.youtube.com/watch?v=TcMBFSGVi1c
 
 
 **Star Wars: The Rise of Skywalker**:  
-![Alt text](./resources/Star Wars.jpeg)  
+![Alt text](./resources/StarWars.jpeg)  
 Trailer: https://www.youtube.com/watch?v=8Qn_spdM5Zg  
 **JamesBond: (Comming soon)**:  
 ![Alt text](./resources/jamesBond.jpg)  
