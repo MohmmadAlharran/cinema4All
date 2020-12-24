@@ -1,0 +1,8 @@
+<svg height="200" width="200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink" version="1.1">
+  <circle cx="105" cy="75" r="70" stroke="none" stroke-width="3" fill="#602C99" />
+  <polyline points="130,150 130,10 40,100 180,100" style="fill:none;stroke:black;stroke-width:20" />
+  <polygon points="30,140 35,160 50,160 40,170 45,185 30,175 15,185 20,170 10,160 25,160" stroke="none" fill="#E3D733"/>
+  <polygon points="80,140 85,160 100,160 90,170 95,185 80,175 65,185 70,170 60,160 75,160" stroke="none" fill="#E3D733"/>
+  <polygon points="130,140 135,160 150,160 140,170 145,185 130,175 115,185 120,170 110,160 125,160" stroke="none" fill="#E3D733"/>
+  <polygon points="180,140 185,160 200,160 190,170 195,185 180,175 165,185 170,170 160,160 175,160" stroke="none" fill="#E3D733"/>
+</svg>
