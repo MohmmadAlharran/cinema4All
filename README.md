@@ -1,4 +1,10 @@
 # cinema4All
+## Devision of Work
+ **Developer:** Schütze (schuefab), Kulke (kulkeeli)
+- **Design of Protype:** Kulke & Schütze
+- **Creation of Prototype:** Schütze
+- **Creation of Logo:** Kulke
+## Requirements
 **Business Description**  
 Our company is called "'cinema4all". We offer all kinds of films suitable for all ages. 
 Our aim is to make the user happy to find all new, upcoming and famous films.
