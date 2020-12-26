@@ -4,6 +4,10 @@
 - **Design of Protype:** Kulke & Schütze
 - **Creation of Prototype:** Schütze
 - **Creation of Logo:** Kulke
+- **Header and Navigation:** Kulke
+- **Footer**: Schütze
+- **General Structure**: Kulke
+- **Main Content of Home Page**: Schütze
 ## Requirements
 **Business Description**  
 Our company is called "'cinema4all". We offer all kinds of films suitable for all ages. 
