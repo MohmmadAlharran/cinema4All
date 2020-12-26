@@ -38,9 +38,18 @@ main {
 		/1fr 6fr 1fr;
     place-items: center center;
 }
+
+.movies-main>.arrow-left {
+	grid-area: movies-main-buttonl;
+}
+
 .movies-main>h2 {
 	grid-area: movies-main-title;
 	justify-self: start;
+}
+
+.movies-main>.arrow-right {
+	grid-area: movies-main-buttonr;
 }
 
 .movies-main>ul {
@@ -48,32 +57,26 @@ main {
 	display: grid;
 	grid-template:
 	"movies-main-film1 movies-main-film2 movies-main-film3 movies-main-film4"
-	/1fr 1fr 1fr;
+	/1fr 1fr 1fr 1fr;
 	padding: 0;
+	justify-self: stretch;
 }
+
 
 .movies-main>ul>li:nth-child(1) {
-	grid-area: movies-main-buttonl;
-}
-
-.movies-main>ul>li:nth-child(2) {
 	grid-area: movies-main-film1;
 }
 
-.movies-main>ul>li:nth-child(3) {
+.movies-main>ul>li:nth-child(2) {
 	grid-area: movies-main-film2;
 }
 
-.movies-main>ul>li:nth-child(4) {
+.movies-main>ul>li:nth-child(3) {
 	grid-area: movies-main-film3;
 }
 
-.movies-main>ul>li:nth-child(5) {
+.movies-main>ul>li:nth-child(4) {
 	grid-area: movies-main-film4;
-}
-
-.movies-main>ul>li:nth-child(6) {
-	grid-area: movies-main-buttonr;
 }
 
 .balken3{
