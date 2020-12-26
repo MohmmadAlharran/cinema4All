@@ -21,15 +21,17 @@ nav {
 main {
     background-color: rgba(96, 44, 153, 0.7);
 	grid-area: main;
+    width: 100%;
     font-size: 15px;
     text-align: inherit;
     background-opacity: .7;
+    padding: 0;
 }
 
 .balken{
     height: 10px;
     position: relative;
-    width: 1980px;
+    width: 100%;
     bottom: 0px;
     left: 0px;
     background-color: rgba(227, 215, 51, 0.6);
@@ -39,7 +41,7 @@ main {
 .balken2{
     height: 10px;
     position: relative;
-    width: 1980px;
+    width: 100%;
     bottom: -251px;
     left: 0px;
     background-color: rgba(227, 215, 51, 0.6);
