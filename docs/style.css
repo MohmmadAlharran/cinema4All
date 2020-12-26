@@ -19,46 +19,36 @@ nav {
 }
 
 main {
+    grid-area: main;
+}
+
+.mainbar{
     background-color: rgba(96, 44, 153, 0.7);
-	grid-area: main;
     width: 100%;
     font-size: 15px;
     text-align: inherit;
     background-opacity: .7;
     padding: 0;
+    border-top: 10px solid rgba(227, 215, 51, 0.6);
+    border-bottom: 10px solid rgba(227, 215, 51, 0.6);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        ". title title title title ."
+        "buttonl film1 film2 film3 film4 buttonr"
+    place-items: center center;
 }
 
-h1 {
-    position:relative;
-    left: 250px;
-}
-
-.balken{
-    height: 10px;
-    position: relative;
-    width: 100%;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(227, 215, 51, 0.6);
-    font-size: 1px;
-}
-
-.balken2{
-    height: 10px;
-    position: relative;
-    width: 100%;
-    bottom: -341px;
-    left: 0px;
-    background-color: rgba(227, 215, 51, 0.6);
-    font-size: 1px;
+#title {
+    
 }
 
 .balken3{
     height: 2px;
     position: relative;
-    width: 990px;
+    width: 940px;
     bottom: -53px;
-    left: 250px;
+    left: 300px;
     background-color: #C6C6C6;
     font-size: 1px;
 }
@@ -70,7 +60,7 @@ main ul {
     place-items: center center;
 }
 
-.image-list p {
+ul > li > p {
     text-align: center; 
     margin: 0; 
     padding: 10px;
@@ -87,6 +77,14 @@ main ul {
 
 footer {
 	grid-area: footer;
+}
+
+footer ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas: "leer FAQ About-Us Impressum Contacts leer";
+	place-items: center center;
+	height: 100%;
 }
 
 ul {
