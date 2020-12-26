@@ -10,6 +10,11 @@ body {
 		"footer footer"
 }
 
+@media screen and (max-width: 800px) {
+	
+	}
+}
+
 header {
 	grid-area: header;
 }
@@ -30,6 +35,7 @@ main > h1 {
     border-top: 10px solid rgba(227, 215, 51, 0.6);
     border-bottom: 10px solid rgba(227, 215, 51, 0.6);
     border-right: 10px solid rgba(227, 215, 51, 0.6);
+	
 }
 
 .movies-main{
@@ -78,28 +84,10 @@ main > h1 {
 .movies-main>ul {
 	grid-area: movies-main-list;
 	display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
 	padding: 0;
 	justify-self: stretch;
-}
-
-
-.movies-main>ul>li:nth-child(1) {
-	grid-area: movies-main-film1;
-}
-
-.movies-main>ul>li:nth-child(2) {
-	grid-area: movies-main-film2;
-}
-
-.movies-main>ul>li:nth-child(3) {
-	grid-area: movies-main-film3;
-}
-
-.movies-main>ul>li:nth-child(4) {
-	grid-area: movies-main-film4;
 }
 
 ul > li > p {
@@ -113,10 +101,10 @@ footer {
 }
 
 footer ul {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-template-areas: "leer FAQ About-Us Impressum Contacts leer";
-	place-items: center center;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;	
+	align-items: stretch;
 	height: 100%;
 }
 
@@ -125,39 +113,74 @@ ul {
 }
 
 nav ul {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-areas: "menu-home menu-movies menu-prices menu-events";
-	place-items: start center;
-	height: 100%;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-around;
+		align-items: stretch;
+	}
+
+	nav ul > li {
+		margin-top: 40px;
+		font-size: 1.5em;
+	}
+
+	nav ul > li > a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+@media screen and (max-width: 800px) {
+	body {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"header"
+		"nav"
+		"main" 
+		"footer";
+		justify-items: center;
+	}
+	
+	main > h1 {
+		width: 75%
+	}
+	
+	nav ul {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-around;
+		align-items: center;
+		padding-left: 15px;
+	}
+
+	nav ul > li {
+		margin: 20px;
+		font-size: 1.5em;
+		text-align: center;
+	}
+
+	nav ul > li > a {
+		color: inherit;
+		text-decoration: none;
+		
+	}
+	
+	footer {
+		justify-self: stretch;
+	}
+	
+	footer ul {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;	
+		align-items: stretch;
+		height: 100%;
+	}
+
 }
 
-nav ul > li {
-	margin-top: 40px;
-	font-size: 1.5em;
+@media screen and (max-width: 566px) {
+	.movies-main > ul {
+		justify-content: center;
+	}
 }
 
-nav ul > li > a {
-	color: inherit;
-	text-decoration: none;
-}
-
-#blink {
-    color: rgba(227, 215, 51);
-}
-
-#menu-home {
-	grid-area: menu-home;
-}
-
-#menu-movies {
-	grid-area: menu-movies;
-}
-
-#menu-prices {
-	grid-area: menu-prices;
-}
-
-#menu-events {
-	grid-area: menu-events;
-}

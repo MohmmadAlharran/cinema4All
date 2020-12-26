@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movieoffer>
+	<movie info="top">
+		<name>
+			Joker
+		</name>
+		<description>
+			In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker. 
+		</description>
+		<image>
+			joker.jpg
+		</image>
+		<video>
+			https://youtu.be/zAGVQLHvwOY
+		</video>
+		<release>
+			2019
+		</release>
+	</movie>
+	<movie info="top">
+		<name>
+			Titanic
+		</name>
+		<description>
+			A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic. 
+		</description>
+		<image>
+			titanic.jpg
+		</image>
+		<video>
+			https://youtu.be/kVrqfYjkTdQ
+		</video>
+		<release>
+			1997
+		</release>
+	</movie>
+	<movie>
+		<name>
+			Us
+		</name>
+		<description>
+			A family's serene beach vacation turns to chaos when their doppelgängers appear and begin to terrorize them.
+		</description>
+		<image>
+			wir.jpg
+		</image>
+		<video>
+			https://youtu.be/kP3QLKZb2HM
+		</video>
+		<release>
+			2019
+		</release>
+	</movie>
+	<movie>
+		<name>
+			Avengers: Endgame
+		</name>
+		<description>
+			After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.
+		</description>
+		<image>
+			AvengersEndgame.jpeg
+		</image>
+		<video>
+			https://www.youtube.com/watch?v=TcMBFSGVi1c
+		</video>
+		<release>
+			2019
+		</release>
+	</movie>
+	<movie>
+		<name>
+			Star Wars: The Rise of Skywalker
+		</name>
+		<description>
+			The surviving members of the resistance face the First Order once again, and the legendary conflict between the Jedi and the Sith reaches its peak bringing the Skywalker saga to its end. 
+		</description>
+		<image>
+			StarWars.jpeg
+		</image>
+		<video>
+			https://www.youtube.com/watch?v=8Qn_spdM5Zg
+		</video>
+		<release>
+			2019
+		</release>
+	</movie>
+	<movie info="soon">
+		<name>
+			JamesBond
+		</name>
+		<description>
+			James Bond has left active service. His peace is short-lived when Felix Leiter, an old friend from the CIA, turns up asking for help, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.
+		</description>
+		<image>
+			jamesBond.jpg
+		</image>
+		<video>
+			 https://youtu.be/yHafN0M2kl0
+		</video>
+		<release>
+			2021
+		</release>
+	</movie>
+	<movie>
+		<name>
+			Wunder
+		</name>
+		<description>
+			Based on the New York Times bestseller, this movie tells the incredibly inspiring and heartwarming story of August Pullman, a boy with facial differences who enters the fifth grade, attending a mainstream elementary school for the first time. 
+		</description>
+		<image>
+			Wunder.jpg
+		</image>
+		<video>
+			https://youtu.be/Ob7fPOzbmzE
+		</video>
+		<release>
+			2017
+		</release>
+	</movie>
+	<movie>
+		<name>
+			Fast & Furious: Hobbs & Shaw
+		</name>
+		<description>
+			Lawman Luke Hobbs (Dwayne "The Rock" Johnson) and outcast Deckard Shaw (Jason Statham) form an unlikely alliance when a cyber-genetically enhanced villain threatens the future of humanity. 
+		</description>
+		<image>
+			FastandFurious.jpeg
+		</image>
+		<video>
+			https://youtu.be/HZ7PAyCDwEg
+		</video>
+		<release>
+			2019
+		</release>
+	</movie>
+	<movie>
+		<name>
+			Tenet
+		</name>
+		<description>
+			Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time. 
+		</description>
+		<image>
+			tenet.jpeg
+		</image>
+		<video>
+			 https://youtu.be/L3pk_TBkihU
+		</video>
+		<release>
+			2020
+		</release>
+	</movie>
+</movieoffer>
