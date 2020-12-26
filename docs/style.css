@@ -5,7 +5,7 @@ body {
 	display: grid;
 	grid-template-columns: 1fr 6fr;
 	grid-template-areas:
-		"nav header"
+		"header nav"
 		"main main" 
 		"footer footer"
 }
@@ -24,4 +24,37 @@ main {
 
 footer {
 	grid-area: footer;
+}
+
+ul {
+	list-style-type: none;
+}
+
+nav ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: "menu-home menu-movies menu-prices menu-events";
+	place-items: center center;
+	height: 100%;
+	
+}
+
+nav ul > li {
+	margin: 0 auto;
+}
+
+#menu-home {
+	grid-area: menu-home;
+}
+
+#menu-movies {
+	grid-area: menu-movies;
+}
+
+#menu-prices {
+	grid-area: menu-prices;
+}
+
+#menu-events {
+	grid-area: menu-events;
 }
