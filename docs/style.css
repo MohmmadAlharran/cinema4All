@@ -4,20 +4,21 @@ body {
 	background-color: black;
 	display: grid;
 	grid-template-areas:
-		"header"
-		"main"
-		"footer"
+		"header header"
+		"main footer"
 }
 
 header {
 	background-color: red;
+	grid-area: header;
 }
 
 main {
 	background-color: blue;
+	grid-area: main;
 }
 
 footer {
 	background-color: green;
+	grid-area: footer;
 }
-
