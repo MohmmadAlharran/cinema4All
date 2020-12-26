@@ -22,6 +22,16 @@ main {
     grid-area: main;
 }
 
+main > h1 {
+    background-color: rgba(96, 44, 153, 0.7);
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    border-top: 10px solid rgba(227, 215, 51, 0.6);
+    border-bottom: 10px solid rgba(227, 215, 51, 0.6);
+    border-right: 10px solid rgba(227, 215, 51, 0.6);
+}
+
 .movies-main{
     background-color: rgba(96, 44, 153, 0.7);
     width: 100%;
@@ -41,23 +51,36 @@ main {
 
 .movies-main>.arrow-left {
 	grid-area: movies-main-buttonl;
+    background-color: rgba(96, 44, 153, 0.0);
+    border: none;
+    color: #C6C6C6;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
 }
 
 .movies-main>h2 {
 	grid-area: movies-main-title;
-	justify-self: start;
+	justify-self: stretch;
+    border-bottom: 2px solid #C6C6C6; 
 }
 
 .movies-main>.arrow-right {
 	grid-area: movies-main-buttonr;
+    background-color: rgba(96, 44, 153, 0.0);
+    border: none;
+    color: #C6C6C6;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
 }
 
 .movies-main>ul {
 	grid-area: movies-main-list;
-	display: grid;
-	grid-template:
-	"movies-main-film1 movies-main-film2 movies-main-film3 movies-main-film4"
-	/1fr 1fr 1fr 1fr;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 	padding: 0;
 	justify-self: stretch;
 }
@@ -79,30 +102,10 @@ main {
 	grid-area: movies-main-film4;
 }
 
-.balken3{
-    height: 2px;
-    position: relative;
-    width: 940px;
-    bottom: -53px;
-    left: 300px;
-    background-color: #C6C6C6;
-    font-size: 1px;
-}
-
-
 ul > li > p {
     text-align: center; 
     margin: 0; 
     padding: 10px;
-}
-
-.button {
-    background-color: rgba(96, 44, 153, 0.0);
-    border: none;
-    color: #C6C6C6;
-    font-size: 25px;
-    text-align: center;
-    cursor: pointer;
 }
 
 footer {
@@ -137,6 +140,10 @@ nav ul > li {
 nav ul > li > a {
 	color: inherit;
 	text-decoration: none;
+}
+
+#blink {
+    color: rgba(227, 215, 51);
 }
 
 #menu-home {
