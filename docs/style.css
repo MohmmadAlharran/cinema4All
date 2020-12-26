@@ -3,22 +3,25 @@ body {
 	font-family: Arial;
 	background-color: black;
 	display: grid;
+	grid-template-columns: 1fr 6fr;
 	grid-template-areas:
-		"header header"
-		"main footer"
+		"nav header"
+		"main main" 
+		"footer footer"
 }
 
 header {
-	background-color: red;
 	grid-area: header;
 }
 
+nav {
+	grid-area: nav;
+}
+
 main {
-	background-color: blue;
 	grid-area: main;
 }
 
 footer {
-	background-color: green;
 	grid-area: footer;
 }
