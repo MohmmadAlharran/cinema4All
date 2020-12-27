@@ -13,7 +13,6 @@ body {
 @media screen and (max-width: 800px) {
 	
 	}
-}
 
 header {
 	grid-area: header;
@@ -88,6 +87,10 @@ main > h1 {
     justify-content: space-between;
 	padding: 0;
 	justify-self: stretch;
+}
+
+#blink {
+    color: rgb(227, 215, 51);
 }
 
 ul > li > p {
@@ -178,6 +181,43 @@ nav ul {
 
 }
 
+.prices-main{
+    background-color: rgba(96, 44, 153, 0.7);
+    width: 100%;
+    font-size: 15px;
+    text-align: inherit;
+    background-opacity: .7;
+    padding: 0;
+    border-top: 10px solid rgba(227, 215, 51, 0.6);
+    border-bottom: 10px solid rgba(227, 215, 51, 0.6);
+    display: flex;
+}
+
+.prices-picture{
+    float: left;
+    padding-top: 55px;
+    padding-bottom: 30px;
+}
+
+#table1{
+    width: 60%;
+    padding: 40px;
+    text-align: left;
+    font-size: 26px;
+}
+
+caption{
+        text-decoration: underline #C6C6C6;
+}
+
+td {
+    padding: 10px;
+    font-size: 18px;
+}
+
+th{
+    padding: 5px;
+}
 @media screen and (max-width: 566px) {
 	.movies-main > ul {
 		justify-content: center;
