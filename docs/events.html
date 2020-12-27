@@ -5,15 +5,15 @@
     <title>cinema4All</title>
 	<link rel="stylesheet" href="style.css">
 	<script src="functions.js"></script>
-  </head>
-  <body onload="getMovieListForHome();">
-    <header>
+   </head>
+  <body>
+      <header>
 		<img src="resources/logo.svg"></img>
 	</header>
-	<nav>
+    	<nav>
 		<ul>
-			<li id="menu-home"> 
-				<a id="blink" href="#">Home</a>
+			<li onclick="test();" id="menu-home"> 
+				<a href="index.html">Home</a>
 			</li>
 			<li id="menu-movies"> 
 				<a href="index.html">Movies</a>
@@ -22,20 +22,23 @@
 				<a href="prices.html">Prices & Gastromony</a> 
 			</li>
 			<li id="menu-events">
-				<a href="events.html">Events</a> 
+				<a id="blink" href="events.html">Events</a> 
 			</li>
 		</ul>
 	</nav>	
 	<main>
-        <h1> Welcome to Movies4all </h1>
-        <div class="movies-main">&nbsp;
-			<h2>Current Movies</h2>
-			<button id="movies-list-arrow-left" class="arrow-left" type="button">&laquo;</button>
-			<ul id="movies-main-list">
+    <h1> Events </h1>
+        <div class="events-main">&nbsp;
+           <ul>
+				<li>
+                    <div class="content">
+                        <h3>Surprise Movie</h3>
+                        <p>See a surprise movie selected by us.</p>
+                    </div>
+				</li>
 			</ul>
-			<button id="movies-list-arrow-right" class="arrow-right" type="button">&raquo;</button>
         </div>
-	</main>
+    </main>
 	<footer>
 		<ul>
             <li id="leer"> </li>
