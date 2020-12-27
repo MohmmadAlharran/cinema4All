@@ -6,14 +6,14 @@
 	<link rel="stylesheet" href="style.css">
 	<script src="functions.js"></script>
   </head>
-  <body>
+  <body onload="getMovieListForHome();">
     <header>
 		<img src="resources/logo.svg"></img>
 	</header>
 	<nav>
 		<ul>
-			<li onclick="test();" id="menu-home"> 
-				<a id="blink" href="index.html">Home</a>
+			<li id="menu-home"> 
+				<a id="blink" href="#">Home</a>
 			</li>
 			<li id="menu-movies"> 
 				<a href="index.html">Movies</a>
@@ -30,34 +30,10 @@
         <h1> Welcome to Movies4all </h1>
         <div class="movies-main">&nbsp;
 			<h2>Current Movies</h2>
-			<button class="arrow-left" type="button">&laquo;</button>
-			<ul>
-				<li>
-					<a>
-						<img src="resources/movie_images/FastandFurious.jpeg" width="200" height="250"></img>
-					</a>
-					<p> Hobbs &amp; Shaw </p>
-				</li>
-				<li>
-					<a>
-						<img src="resources/movie_images/joker.jpg" width="200" height="250"></img>
-					</a>
-					<p> Joker </p>
-				</li>
-				<li>
-					<a>
-						<img src="resources/movie_images/StarWars.jpeg" width="200" height="250"></img>
-					</a>
-					<p> StarWars </p>
-				</li>
-				<li>
-					<a>
-						<img src="resources/movie_images/Wunder.jpg" width="200" height="250"></img>
-					</a>
-					<p> Wunder </p>
-				</li>
+			<button id="movies-list-arrow-left" class="arrow-left" type="button">&laquo;</button>
+			<ul id="movies-main-list">
 			</ul>
-			<button class="arrow-right" type="button">&raquo;</button>
+			<button id="movies-list-arrow-right" class="arrow-right" type="button">&raquo;</button>
         </div>
 	</main>
 	<footer>
