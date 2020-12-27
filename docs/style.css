@@ -193,34 +193,80 @@ nav ul {
     display: flex;
 }
 
-.prices-picture{
-    float: left;
-    padding-top: 55px;
-    padding-bottom: 30px;
+.prices-picture, .prices-picture2, .prices-picture3{
+    padding-top: 40px;
 }
 
-#table1{
-    width: 60%;
-    padding: 40px;
-    text-align: left;
-    font-size: 26px;
+.prices-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: center;
 }
 
-caption{
-        text-decoration: underline #C6C6C6;
+.prices-container > .image {
+    width: 300px;
 }
 
-td {
-    padding: 10px;
+.prices-container > div {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
     font-size: 18px;
 }
 
-th{
-    padding: 5px;
+.prices-container > div > h3 {
+    font-size: 25px;
 }
+
+.events-main{
+    background-color: rgba(96, 44, 153, 0.7);
+    width: 100%;
+    font-size: 15px;
+    text-align: inherit;
+    background-opacity: .7;
+    padding: 0;
+    border-top: 10px solid rgba(227, 215, 51, 0.6);
+    border-bottom: 10px solid rgba(227, 215, 51, 0.6);
+    display: flex;
+}
+
+.events-main > ul {
+    list-style-type: none;
+    margin-left:10px;
+    padding-left:10px;
+    display: inline-block;
+}
+
+.events-main > ul > li > a > img {
+    float:left;
+    padding-top: 20px;
+}
+
+.content {
+    text-align: left; 
+    display: inline-block;
+    margin: 10px; 
+    padding-left: 50px;
+}
+
 @media screen and (max-width: 566px) {
 	.movies-main > ul {
 		justify-content: center;
 	}
+    
+    .prices-picture {
+        margin-left: -140px;
+    }
+    
+    .prices-picture2 {
+        padding-top: 10px;
+        margin-left: 60px;
+    }
+    
+    .prices-picture3 {
+        margin-left: -40px;
+    }
 }
+
 
