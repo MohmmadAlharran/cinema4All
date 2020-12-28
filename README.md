@@ -8,6 +8,8 @@
 - **Footer**: Schütze
 - **General Structure**: Kulke
 - **Main Content of Home Page**: Schütze
+- **Main Content of Prices&Gastronomy**: Schütze
+- **Main Content of Events**: Schütze
 ## Requirements
 **Business Description**  
 Our company is called "'cinema4all". We offer all kinds of films suitable for all ages. 
