@@ -177,7 +177,15 @@ movies-main-list {
 
 }
 
+@media screen and (max-width: 692px) {
+    .prices-container > .image {
+        display: none;
+    }
+}
+
+
 @media screen and (max-width: 800px) {
+	
 	#movies-movie-list>li>a {
 		display: grid;
 		grid-template:
