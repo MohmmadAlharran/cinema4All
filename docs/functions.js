@@ -24,7 +24,7 @@ function getMovieListForMovies() {
 			}	
 		};
 	} else {
-		movieListHome(0);
+		movieListMovie();
 	}
 }
 
@@ -73,7 +73,7 @@ function movieListMovie() {
 	let htmlMovieList = "";
 	for (var i = 0; i < xmlNames.length; i++) {
 		htmlMovieList += "<li>"
-							+ "<a href='##>"
+							+ "<a href='#'>"
 								+ "<h2>" + xmlNames[i].childNodes[0].nodeValue + "(" + xmlRelease[i].childNodes[0].nodeValue +  "</h2>"
 								+ "<iframe width='560' height='315' src='" + xmlVideos[i].childNodes[0].nodeValue + "' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
 								+ "<div>" + xmlDescriptions[i].childNodes[0].nodeValue + "</div>"
