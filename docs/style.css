@@ -255,92 +255,96 @@ movies-main-list {
 
 }
 
-.prices-main{
-    background-color: rgba(96, 44, 153, 0.7);
-    width: 100%;
-    font-size: 15px;
-    text-align: inherit;
-    background-opacity: .7;
-    padding: 0;
-    border-top: 10px solid rgba(227, 215, 51, 0.6);
-    border-bottom: 10px solid rgba(227, 215, 51, 0.6);
-    display: flex;
+#prices-main{
+    display: grid;
+    grid-template: 
+        "title title title"
+        "img prices-categorie prices-price"
+        /1fr 1fr 1fr;
+    column-gap: 10px;
 }
 
-.prices-picture, .prices-picture2, .prices-picture3{
-    padding-top: 40px;
+#prices-main > h2 {
+    grid-area: title;
 }
 
-.prices-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-items: center;
+#prices-main > img {
+    grid-area: img;
 }
 
-.prices-container > .image {
-    width: 300px;
+#prices-categorie {
+    grid-area: prices-categorie;
 }
 
-.prices-container > div {
-    width: 200px;
-    margin: 10px;
-    text-align: center;
-    line-height: 50px;
-    font-size: 18px;
+#prices-price {
+    grid-area: prices-price;
 }
 
-.prices-container > div > h3 {
-    font-size: 25px;
+#prices-main2{
+    display: grid;
+    grid-template: 
+        "title title"
+        "img1 img1"
+        "prices-food prices-foodprice"
+        "img2 img2"
+        /1fr 1fr;
+    column-gap: 10px;
 }
 
-.events-main{
-    background-color: rgba(96, 44, 153, 0.7);
-    width: 100%;
-    font-size: 15px;
-    text-align: inherit;
-    background-opacity: .7;
-    padding: 0;
-    border-top: 10px solid rgba(227, 215, 51, 0.6);
-    border-bottom: 10px solid rgba(227, 215, 51, 0.6);
-    display: flex;
+#prices-main2 > h2 {
+    grid-area: title;
 }
 
-.events-main > ul {
-    list-style-type: none;
-    margin-left:10px;
-    padding-left:10px;
-    display: inline-block;
+#prices-picture {
+    grid-area: img1;
 }
 
-.events-main > ul > li > a > img {
-    float:left;
-    padding-top: 20px;
+#prices-picture2 {
+    grid-area: img2;
 }
 
-.content {
-    text-align: left; 
-    display: inline-block;
-    margin: 10px; 
-    padding-left: 50px;
+#prices-food {
+    grid-area: prices-food;
 }
+
+#prices-foodprice {
+    grid-area: prices-foodprice;
+}
+
+#events-main{
+    display: grid;
+    grid-template: 
+        "title title"
+        "description description"
+        /1fr 1fr;
+}
+
+#events-main > h2 {
+    grid-area: title
+}
+
+#events {
+    grid-area: description;
+}
+
 
 @media screen and (max-width: 566px) {
 	.movies-main > ul {
 		justify-content: center;
 	}
-    
-    .prices-picture {
-        margin-left: -140px;
-    }
-    
-    .prices-picture2 {
-        padding-top: 10px;
-        margin-left: 60px;
-    }
-    
-    .prices-picture3 {
-        margin-left: -40px;
-    }
 }
 
-
+@media screen and (max-width: 566px) {
+	#prices-main{
+    display: grid;
+    grid-template: 
+        "title title"
+        "prices-categorie prices-price"
+        /1fr 1fr;
+    column-gap: 10px;
+    }
+    
+    #prices-main > img {
+        display: none;
+    }
+}
