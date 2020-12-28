@@ -9,7 +9,13 @@
 - **General Structure**: Kulke
 - **Main Content of Home Page**: Schütze
 - **Main Content of Prices&Gastronomy**: Schütze
+- **XML File**: Kulke
+- **JavaScript**: Kulke
 - **Main Content of Events**: Schütze
+- **Event Page**: Schütze
+- **Prices & Gastronomy Page**: Schütze
+- **Movie Page**: Kulke
+
 ## Requirements
 **Business Description**  
 Our company is called "'cinema4all". We offer all kinds of films suitable for all ages. 
