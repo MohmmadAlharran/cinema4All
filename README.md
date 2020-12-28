@@ -15,6 +15,8 @@
 - **Event Page**: Schütze
 - **Prices & Gastronomy Page**: Schütze
 - **Movie Page**: Kulke
+- **Top Rated Page**: Kulke
+- **Comming Soon Page**: Kulke
 
 ## Requirements
 **Business Description**  
