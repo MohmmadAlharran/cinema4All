@@ -34,8 +34,8 @@ main > h1 {
 	
 }
 
-.movies-main{
-    background-color: rgba(96, 44, 153, 0.7);
+.list{
+	background-color: rgba(96, 44, 153, 0.7);
     width: 100%;
     font-size: 15px;
     text-align: inherit;
@@ -43,6 +43,9 @@ main > h1 {
     padding: 0;
     border-top: 10px solid rgba(227, 215, 51, 0.6);
     border-bottom: 10px solid rgba(227, 215, 51, 0.6);
+}
+
+#movies-main{
     display: grid;
     grid-template:
         ". movies-main-title ."
@@ -51,31 +54,30 @@ main > h1 {
     place-items: center center;
 }
 
-.movies-main>.arrow-left {
-	grid-area: movies-main-buttonl;
-    background-color: rgba(96, 44, 153, 0.0);
+.arrow {
+	background-color: rgba(96, 44, 153, 0.0);
     border: none;
-    color: #C6C6C6;
-    font-size: 25px;
+    color: #E3D733;
+    font-size: 4em;
     text-align: center;
     cursor: pointer;
+	font-weight: bold;
+}
+
+#movies-list-arrow-left {
+	grid-area: movies-main-buttonl;
+    
 }
 
 .movies-main>h2 {
 	grid-area: movies-main-title;
+}
+
+.list h2 {
 	justify-self: stretch;
     border-bottom: 2px solid #C6C6C6; 
 }
 
-.movies-main>.arrow-right {
-	grid-area: movies-main-buttonr;
-    background-color: rgba(96, 44, 153, 0.0);
-    border: none;
-    color: #C6C6C6;
-    font-size: 25px;
-    text-align: center;
-    cursor: pointer;
-}
 
 .movies-main>ul {
 	grid-area: movies-main-list;
@@ -84,6 +86,10 @@ main > h1 {
     justify-content: space-between;
 	padding: 0;
 	justify-self: stretch;
+}
+#movies-list-arrow-right {
+	grid-area: movies-main-buttonr;
+    
 }
 
 .movies-main>ul>li>a>img {
@@ -99,7 +105,9 @@ main > h1 {
 ul > li > p {
     text-align: center; 
     margin: 0; 
-    padding: 10px;
+    padding-top: 10px;
+	padding-bottom: 10px;
+	width: 200px;
 }
 
 footer {
@@ -125,17 +133,54 @@ nav ul {
 		align-items: stretch;
 	}
 
-	nav ul > li {
-		margin-top: 40px;
-		font-size: 1.5em;
-	}
+nav ul > li {
+	margin-top: 40px;
+	font-size: 1.5em;
+}
 
-	nav ul > li > a {
-		color: inherit;
-		text-decoration: none;
-	}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+#movies-movie-list {
+	display: grid;		
+	margin-top: 0px;
+	padding-right: 40px;
+}
+
+#movies-movie-list>ul>li {
+	display: grid;		
+}
+	
+#movies-movie-list>li>a {
+	display: grid;
+	 grid-template:
+		"title title"
+		"trailer details"
+		/ 1fr 2fr;
+	column-gap: 10px;
+}
+#movies-movie-list>li>a>h2 {
+	grid-area: title;
+}
+	
+#movies-movie-list>li>a>iframe {
+	grid-area: trailer;
+}
+	
+#movies-movie-list>li>a>div {
+	grid-area: details;
+}
+
+movies-main-list {
+
+}
 
 @media screen and (max-width: 800px) {
+	.movies-main>ul {
+		
+	}
 	body {
 		grid-template-columns: 1fr;
 		grid-template-areas:
@@ -177,9 +222,13 @@ nav ul {
 	footer ul {
 		display: flex;
 		flex-flow: column nowrap;
-		justify-content: center;	
-		align-items: stretch;
-		height: 100%;
+		justify-content: space-between;	
+		align-items: center;
+		height: 200px;
+	}
+	
+	footer ul * {
+		font-size: 1.25em;
 	}
 
 }

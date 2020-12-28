@@ -6,17 +6,17 @@
 	<link rel="stylesheet" href="style.css">
 	<script src="functions.js"></script>
   </head>
-  <body onload="getMovieListForHome();">
+  <body onload="getMovieListForMovies();">
     <header>
 		<img src="resources/logo.svg"></img>
 	</header>
 	<nav>
 		<ul>
 			<li id="menu-home"> 
-				<a id="blink" href="#">Home</a>
+				<a href="index.html">Home</a>
 			</li>
 			<li id="menu-movies"> 
-				<a href="movies.html">Movies</a>
+				<a id="blink" href="movies.html">Movies</a>
 			</li>
 			<li id="menu-prices"> 
 				<a href="prices.html">Prices & Gastromony</a> 
@@ -27,13 +27,22 @@
 		</ul>
 	</nav>	
 	<main>
-        <h1> Welcome to Movies4all </h1>
-        <div class="movies-main list" id="movies-main">&nbsp;
-			<h2>Current Movies</h2>
-			<button id="movies-list-arrow-left" class="arrow" type="button">&larr;</button>
-			<ul id="movies-main-list">
+		<h1>All Movies</h2>
+        <div class="list">
+			<ul id="movies-movie-list">
+				<li>
+					<a href="#">
+						<h2>Name (Release)</h2>
+						<div>In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker. </div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h2>Name (Release)</h2>
+						<div>In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker. </div>
+					</a>
+				</li>
 			</ul>
-			<button id="movies-list-arrow-right" class="arrow" type="button">&rarr;</button>
         </div>
 	</main>
 	<footer>
