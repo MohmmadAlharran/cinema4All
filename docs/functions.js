@@ -9,21 +9,17 @@ function getMovieListForHome() {
 				movieListHome(0);
 			}	
 		};
-	} else {
-		movieListHome(0);
 	}
 }
 
-function getMovieListForMovies() {
+function getMovieListForMovies(filter) {
 	if (xmlData == undefined) {	
 		xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				xmlData = this.responseXML;
-				movieListMovie();
+				movieListMovie(filter);
 			}	
 		};
-	} else {
-		movieListMovie();
 	}
 }
 
@@ -37,7 +33,7 @@ function movieListHome(start) {
 	let amount = Math.min(xmlNames.length - start, 4)
 	for (var i = start; i < start + amount; i++) {
 		htmlMovieList += "<li>"
-							+ "<a>"				
+							+ "<a href='#'>"				
 								+ "<img src='resources/movie_images/" + xmlImages[i].childNodes[0].nodeValue +  "' width='200' height='250'></img>"
 							+ "</a>"
 							+ "<p>" + xmlNames[i].childNodes[0].nodeValue + "</p>"
@@ -63,14 +59,20 @@ function movieListHome(start) {
 	document.getElementById("movies-main-list").innerHTML = htmlMovieList;
 }
 
-function movieListMovie() {
+function movieListMovie(filter) {
 	var xmlNames = xmlData.getElementsByTagName("name");
 	var xmlDescriptions = xmlData.getElementsByTagName("description");
 	var xmlVideos = xmlData.getElementsByTagName("video");
 	var xmlRelease = xmlData.getElementsByTagName("release");
-	
 	let htmlMovieList = "";
+	
 	for (var i = 0; i < xmlNames.length; i++) {
+		if (filter == 1 && xmlData.getElementsByTagName("movie")[i].getAttribute("info") != "top") {
+			continue;
+		} else if (filter == 2 && xmlData.getElementsByTagName("movie")[i].getAttribute("info") != "soon") {
+			continue;
+		}
+		
 		htmlMovieList += "<li>"
 							+ "<a href='#'>"
 								+ "<h2>" + xmlNames[i].childNodes[0].nodeValue + "(" + xmlRelease[i].childNodes[0].nodeValue +  ")</h2>"

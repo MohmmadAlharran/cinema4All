@@ -7,7 +7,8 @@ body {
 	grid-template-areas:
 		"header nav"
 		"main main" 
-		"footer footer"
+		"footer footer";
+	margin:0;
 }
 
 
@@ -46,13 +47,14 @@ main > h1 {
     border-bottom: 10px solid rgba(227, 215, 51, 0.6);
 }
 
-#movies-main{
+.home-list{
     display: grid;
     grid-template:
         ". movies-main-title ."
         "movies-main-buttonl movies-main-list movies-main-buttonr"
 		/1fr 6fr 1fr;
     place-items: center center;
+	margin-bottom: 20px;
 }
 
 .arrow {
@@ -70,7 +72,7 @@ main > h1 {
     
 }
 
-.movies-main>h2 {
+.home-list>h2 {
 	grid-area: movies-main-title;
 }
 
@@ -80,7 +82,7 @@ main > h1 {
 }
 
 
-.movies-main>ul {
+.home-list>ul {
 	grid-area: movies-main-list;
 	display: flex;
     flex-flow: row wrap;
@@ -92,14 +94,17 @@ main > h1 {
 	grid-area: movies-main-buttonr;
     
 }
+.home-list>ul>li>h3 {
+	text-align: center;
+}
 
-.movies-main>ul>li>a>img {
+.home-list>ul>li>a>img {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 }
 
-#blink {
+.blink {
     color: rgb(227, 215, 51);
 }
 
@@ -139,6 +144,20 @@ nav ul > li {
 	font-size: 1.5em;
 }
 
+nav ul ul {
+	position: absolute;
+	display: block;
+}
+
+nav ul ul li {
+	list-style-type: circle;
+}
+
+nav ul ul * {
+	font-size: 0.9em;
+	color: #C6C6C6;
+}
+
 a {
 	color: inherit;
 	text-decoration: none;
@@ -172,10 +191,6 @@ a {
 	
 #movies-movie-list>li>a>div {
 	grid-area: details;
-}
-
-movies-main-list {
-
 }
 
 @media screen and (max-width: 692px) {
@@ -231,7 +246,21 @@ movies-main-list {
 		font-size: 1.5em;
 		text-align: center;
 	}
-
+	
+	nav ul ul  {
+		position: relative;
+		margin-left: 180px;
+	}
+	
+	nav ul ul>li {
+		position: unset;
+		text-align:left;
+	}
+	
+	nav ul ul>li> * {
+		font-size: 0.65em;
+	}
+	
 	nav ul > li > a {
 		color: inherit;
 		text-decoration: none;
@@ -330,7 +359,7 @@ movies-main-list {
 
 
 @media screen and (max-width: 566px) {
-	.movies-main > ul {
+	.home-list > ul {
 		justify-content: center;
 	}
 }
