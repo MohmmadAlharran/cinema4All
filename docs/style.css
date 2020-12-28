@@ -178,9 +178,23 @@ movies-main-list {
 }
 
 @media screen and (max-width: 800px) {
-	.movies-main>ul {
+	#movies-movie-list>li>a {
+		display: grid;
+		grid-template:
+			"title"
+			"trailer" 
+			"details"
+			/ 1fr;
+
+	}
+	
+	#movies-movie-list>li>a>iframe {
+		width: 100%;
+		height: 48vw;
+		margin: 0 auto;
 		
 	}
+
 	body {
 		grid-template-columns: 1fr;
 		grid-template-areas:

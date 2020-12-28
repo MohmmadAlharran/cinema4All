@@ -19,7 +19,6 @@ function getMovieListForMovies() {
 		xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				xmlData = this.responseXML;
-				alert("hi else");	
 				movieListMovie();
 			}	
 		};
@@ -74,7 +73,7 @@ function movieListMovie() {
 	for (var i = 0; i < xmlNames.length; i++) {
 		htmlMovieList += "<li>"
 							+ "<a href='#'>"
-								+ "<h2>" + xmlNames[i].childNodes[0].nodeValue + "(" + xmlRelease[i].childNodes[0].nodeValue +  "</h2>"
+								+ "<h2>" + xmlNames[i].childNodes[0].nodeValue + "(" + xmlRelease[i].childNodes[0].nodeValue +  ")</h2>"
 								+ "<iframe width='560' height='315' src='" + xmlVideos[i].childNodes[0].nodeValue + "' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
 								+ "<div>" + xmlDescriptions[i].childNodes[0].nodeValue + "</div>"
 							 + "</a>"
