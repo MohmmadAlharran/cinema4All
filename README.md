@@ -17,6 +17,10 @@
 - **Movie Page**: Kulke
 - **Top Rated Page**: Kulke
 - **Comming Soon Page**: Kulke
+- **FAQ Page**: Schütze
+- **Contacts Page**: Schütze
+- **Legal Notice Page**: Schütze
+- **About Us Page**: Schütze
 
 ## Requirements
 **Business Description**  
