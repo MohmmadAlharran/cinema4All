@@ -300,6 +300,8 @@ a {
 
 #prices-main > img {
     grid-area: img;
+    margin-left: auto;
+	margin-right: auto;
 }
 
 #prices-categorie {
@@ -327,18 +329,23 @@ a {
 
 #prices-picture {
     grid-area: img1;
+    margin-left: 40px;
 }
 
 #prices-picture2 {
     grid-area: img2;
+    margin-left: 40px;
 }
 
 #prices-food {
     grid-area: prices-food;
+    margin-left: 40px;
 }
 
 #prices-foodprice {
     grid-area: prices-foodprice;
+    margin-left: auto;
+    margin-right: 1100px;
 }
 
 #events-main{
@@ -366,6 +373,26 @@ a {
 @media screen and (max-width: 566px) {
 	.home-list > ul {
 		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	#prices-foodprice {
+		grid-area: prices-foodprice;
+	}
+}
+
+@media screen and (max-width: 1347px) {
+	#prices-foodprice {
+		grid-area: prices-foodprice;
+        margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 1287px) {
+	#prices-foodprice {
+		grid-area: prices-foodprice;
+        margin-top: 40px;
 	}
 }
 
