@@ -193,13 +193,6 @@ a {
 	grid-area: details;
 }
 
-@media screen and (max-width: 692px) {
-    .prices-container > .image {
-        display: none;
-    }
-}
-
-
 @media screen and (max-width: 800px) {
 	
 	#movies-movie-list>li>a {
@@ -393,6 +386,14 @@ a {
 	#prices-foodprice {
 		grid-area: prices-foodprice;
         margin-top: 40px;
+	}
+}
+
+@media screen and (max-width: 797px) {
+	#prices-foodprice {
+		grid-area: prices-foodprice;
+        margin-top: 0;
+        margin-right: 80px;
 	}
 }
 
