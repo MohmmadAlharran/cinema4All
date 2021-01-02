@@ -193,6 +193,86 @@ a {
 	grid-area: details;
 }
 
+#prices-main{
+    display: grid;
+    grid-template: 
+        "title title title"
+        "img prices-categorie prices-price"
+        /1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+#prices-main > h2 {
+    grid-area: title;
+}
+
+#prices-main > img {
+    grid-area: img;
+    margin-left: auto;
+	margin-right: auto;
+}
+
+#prices-categorie {
+    grid-area: prices-categorie;
+}
+
+#prices-price {
+    grid-area: prices-price;
+}
+
+#prices-main2{
+    display: grid;
+    grid-template: 
+        "title title title"
+        "img1 prices-food img2"
+        /1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+#prices-main2 > h2 {
+    grid-area: title;
+}
+
+#prices-picture {
+    grid-area: img1;
+    margin-left: 40px;
+}
+
+#prices-picture2 {
+    grid-area: img2;
+    margin-left: 40px;
+}
+
+#prices-food {
+    grid-area: prices-food;
+}
+
+#prices-foodprice {
+    grid-area: prices-foodprice;
+}
+
+#events-main{
+    display: grid;
+    grid-template: 
+        "title title"
+        "description description"
+        /1fr 1fr;
+}
+
+#events-main > h2 {
+    grid-area: title
+}
+
+#events {
+    grid-area: description;
+}
+
+.footer-text{
+    text-align: left;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
 @media screen and (max-width: 800px) {
 	
 	#movies-movie-list>li>a {
@@ -275,125 +355,27 @@ a {
 	footer ul * {
 		font-size: 1.25em;
 	}
-
-}
-
-#prices-main{
-    display: grid;
-    grid-template: 
-        "title title title"
-        "img prices-categorie prices-price"
-        /1fr 1fr 1fr;
-    column-gap: 10px;
-}
-
-#prices-main > h2 {
-    grid-area: title;
-}
-
-#prices-main > img {
-    grid-area: img;
-    margin-left: auto;
-	margin-right: auto;
-}
-
-#prices-categorie {
-    grid-area: prices-categorie;
-}
-
-#prices-price {
-    grid-area: prices-price;
-}
-
-#prices-main2{
-    display: grid;
-    grid-template: 
-        "title title"
-        "img1 img1"
-        "prices-food prices-foodprice"
-        "img2 img2"
-        /1fr 1fr;
-    column-gap: 10px;
-}
-
-#prices-main2 > h2 {
-    grid-area: title;
-}
-
-#prices-picture {
-    grid-area: img1;
-    margin-left: 40px;
-}
-
-#prices-picture2 {
-    grid-area: img2;
-    margin-left: 40px;
-}
-
-#prices-food {
-    grid-area: prices-food;
-    margin-left: 40px;
-}
-
-#prices-foodprice {
-    grid-area: prices-foodprice;
-    margin-left: auto;
-    margin-right: 1100px;
-}
-
-#events-main{
-    display: grid;
-    grid-template: 
-        "title title"
-        "description description"
-        /1fr 1fr;
-}
-
-#events-main > h2 {
-    grid-area: title
-}
-
-#events {
-    grid-area: description;
-}
-
-.footer-text{
-    text-align: left;
-    margin-left: 30px;
-    font-size: 18px;
+    
+    #prices-main2 {
+        display: grid;
+        grid-template: 
+            "title"
+            "img1"
+            "prices-food"
+            "img2"
+            /1fr;
+        column-gap: 10px;
+        justify-items: center;
+    }
+    
+    #prices-picture, #prices-picture2 {
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 566px) {
 	.home-list > ul {
 		justify-content: center;
-	}
-}
-
-@media screen and (max-width: 1400px) {
-	#prices-foodprice {
-		grid-area: prices-foodprice;
-	}
-}
-
-@media screen and (max-width: 1347px) {
-	#prices-foodprice {
-		grid-area: prices-foodprice;
-        margin-top: 20px;
-	}
-}
-
-@media screen and (max-width: 1287px) {
-	#prices-foodprice {
-		grid-area: prices-foodprice;
-        margin-top: 40px;
-	}
-}
-
-@media screen and (max-width: 797px) {
-	#prices-foodprice {
-		grid-area: prices-foodprice;
-        margin-top: 0;
-        margin-right: 80px;
 	}
 }
 
@@ -405,6 +387,7 @@ a {
         "prices-categorie prices-price"
         /1fr 1fr;
     column-gap: 10px;
+    justify-items: center;
     }
     
     #prices-main > img {
