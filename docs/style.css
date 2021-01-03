@@ -141,7 +141,7 @@ nav ul {
 
 nav ul > li {
 	margin-top: 40px;
-	font-size: 1.5em;
+	font-size: 22px;
 }
 
 nav ul ul {
@@ -273,7 +273,17 @@ a {
     font-size: 18px;
 }
 
-@media screen and (max-width: 800px) {
+#prices-main>h2, #prices-main2>h2, #events-main>h2, #events {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+@media screen and (max-width: 1500px) {
+	main > h1 {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 900px) {
 	
 	#movies-movie-list>li>a {
 		display: grid;
@@ -316,7 +326,7 @@ a {
 
 	nav ul > li {
 		margin: 20px;
-		font-size: 1.5em;
+		font-size: 22px;
 		text-align: center;
 	}
 	
@@ -331,7 +341,7 @@ a {
 	}
 	
 	nav ul ul>li> * {
-		font-size: 0.65em;
+		font-size: 16px;
 	}
 	
 	nav ul > li > a {
@@ -353,7 +363,7 @@ a {
 	}
 	
 	footer ul * {
-		font-size: 1.25em;
+		font-size: 18px;
 	}
     
     #prices-main2 {
@@ -371,6 +381,7 @@ a {
     #prices-picture, #prices-picture2 {
         margin-left: 0;
     }
+	
 }
 
 @media screen and (max-width: 566px) {
