@@ -1,6 +1,10 @@
+// Request for the XML data via HTTP
 var xhttp = new XMLHttpRequest();
+
+// Stores the requested XML data
 var xmlData;
 
+// Get XML data and calling movieListHome(start)
 function getMovieListForHome() {
 	if (xmlData == undefined) {	
 		xhttp.onreadystatechange = function() {
@@ -12,6 +16,7 @@ function getMovieListForHome() {
 	}
 }
 
+// Get XML data and calling movieListMovie(filter)
 function getMovieListForMovies(filter) {
 	if (xmlData == undefined) {	
 		xhttp.onreadystatechange = function() {
@@ -26,11 +31,18 @@ function getMovieListForMovies(filter) {
 xhttp.open("GET", "https://mohmmadalharran.github.io/cinema4All/resources/movies.xml", true);
 xhttp.send();
 
+//Displaying the first four movies for index.html starting by the given index
 function movieListHome(start) {
+	// Getting needed data
 	var xmlNames = xmlData.getElementsByTagName("name");
 	var xmlImages = xmlData.getElementsByTagName("image");
+	
+	// The variable containing the html
 	let htmlMovieList = "";
+	
+	// It will display four of the movies or less if there are not enough movies at start
 	let amount = Math.min(xmlNames.length - start, 4)
+	
 	for (var i = start; i < start + amount; i++) {
 		htmlMovieList += "<li>"
 							+ "<a href='#'>"				
@@ -40,18 +52,24 @@ function movieListHome(start) {
 						+ "</li>";
 	}
 	
+	// Are there movies at index start + 4?
 	if ((start + 4) < xmlNames.length) {
+		// Set the function call for right arrow so that they can be chosen next
 		document.getElementById("movies-list-arrow-right").setAttribute("onclick", "movieListHome(" + (start + 4) + ");");
 		document.getElementById("movies-list-arrow-right").setAttribute("style", "display:unset");
 	} else {
+		// Right arrow button is not needed
 		document.getElementById("movies-list-arrow-right").setAttribute("onclick", "");
 		document.getElementById("movies-list-arrow-right").setAttribute("style", "display:none");
 	}
 	
+	// Are at he beginning of the list?
 	if (start < 4) {
+		// Left arrow button is not needed
 		document.getElementById("movies-list-arrow-left").setAttribute("onclick", "");
 		document.getElementById("movies-list-arrow-left").setAttribute("style", "display:none");
 	} else {
+		// Set the function call for left arrow so that they can be chosen next
 		document.getElementById("movies-list-arrow-left").setAttribute("onclick", "movieListHome(" + (start - 4) + ");");
 		document.getElementById("movies-list-arrow-left").setAttribute("style", "display:unset");
 	}
@@ -59,6 +77,7 @@ function movieListHome(start) {
 	document.getElementById("movies-main-list").innerHTML = htmlMovieList;
 }
 
+//Displaying all movies and filter them depending on the parameter
 function movieListMovie(filter) {
 	var xmlNames = xmlData.getElementsByTagName("name");
 	var xmlDescriptions = xmlData.getElementsByTagName("description");
@@ -67,8 +86,10 @@ function movieListMovie(filter) {
 	let htmlMovieList = "";
 	
 	for (var i = 0; i < xmlNames.length; i++) {
+		// 1 = only show top rated movies
 		if (filter == 1 && xmlData.getElementsByTagName("movie")[i].getAttribute("info") != "top") {
 			continue;
+		// 2 = only show movies comming soon
 		} else if (filter == 2 && xmlData.getElementsByTagName("movie")[i].getAttribute("info") != "soon") {
 			continue;
 		}
