@@ -39,6 +39,11 @@ main > h1 {
 	
 }
 
+main > hr {
+	border: none;
+	margin-bottom: 80px;
+}
+
 .list{
 	background-color: rgba(96, 44, 153, 0.7);
     width: 100%;
@@ -82,7 +87,7 @@ main > h1 {
 .list h2 {
 	justify-self: stretch;
     border-bottom: 2px solid #C6C6C6; 
-	font-size: 30px;
+	font-size: 40px;
 }
 
 
@@ -148,7 +153,7 @@ nav ul {
 	}
 
 nav ul > li {
-	margin-top: 40px;
+	margin-top: 25px;
 	font-size: 30px;
 }
 

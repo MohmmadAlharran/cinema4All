@@ -34,16 +34,16 @@ xhttp.send();
 //Displaying the first four movies for index.html starting by the given index
 function movieListHome(start) {
 	// Getting needed data
-	var xmlNames = xmlData.getElementsByTagName("name");
-	var xmlImages = xmlData.getElementsByTagName("image");
+	let xmlNames = xmlData.getElementsByTagName("name");
+	let xmlImages = xmlData.getElementsByTagName("image");
 	
 	// The variable containing the html
 	let htmlMovieList = "";
 	
 	// It will display four of the movies or less if there are not enough movies at start
 	let amount = Math.min(xmlNames.length - start, 4)
-	
-	for (var i = start; i < start + amount; i++) {
+	let i
+	for (i = start; i < start + amount; i++) {
 		htmlMovieList += "<li>"
 							+ "<a href='#'>"				
 								+ "<img src='resources/movie_images/" + xmlImages[i].childNodes[0].nodeValue +  "' width='200' height='250'></img>"
@@ -79,13 +79,13 @@ function movieListHome(start) {
 
 //Displaying all movies and filter them depending on the parameter
 function movieListMovie(filter) {
-	var xmlNames = xmlData.getElementsByTagName("name");
-	var xmlDescriptions = xmlData.getElementsByTagName("description");
-	var xmlVideos = xmlData.getElementsByTagName("video");
-	var xmlRelease = xmlData.getElementsByTagName("release");
+	let xmlNames = xmlData.getElementsByTagName("name");
+	let xmlDescriptions = xmlData.getElementsByTagName("description");
+	let xmlVideos = xmlData.getElementsByTagName("video");
+	let xmlRelease = xmlData.getElementsByTagName("release");
 	let htmlMovieList = "";
-	
-	for (var i = 0; i < xmlNames.length; i++) {
+	var i ;
+	for (i = 0; i < xmlNames.length; i++) {
 		// 1 = only show top rated movies
 		if (filter == 1 && xmlData.getElementsByTagName("movie")[i].getAttribute("info") != "top") {
 			continue;
