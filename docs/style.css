@@ -197,7 +197,7 @@ a {
     display: grid;
     grid-template: 
         "title title title"
-        "img prices-categorie prices-price"
+        "img prices-categorie ."
         /1fr 1fr 1fr;
     column-gap: 10px;
 }
@@ -208,16 +208,11 @@ a {
 
 #prices-main > img {
     grid-area: img;
-    margin-left: auto;
-	margin-right: auto;
+    margin-left: 40px;
 }
 
 #prices-categorie {
     grid-area: prices-categorie;
-}
-
-#prices-price {
-    grid-area: prices-price;
 }
 
 #prices-main2{
