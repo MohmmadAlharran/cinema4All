@@ -41,7 +41,6 @@ main > h1 {
     width: 100%;
     font-size: 15px;
     text-align: inherit;
-    background-opacity: .7;
     padding: 0;
     border-top: 10px solid rgba(227, 215, 51, 0.6);
     border-bottom: 10px solid rgba(227, 215, 51, 0.6);
