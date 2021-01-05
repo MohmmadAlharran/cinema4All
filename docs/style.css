@@ -25,15 +25,23 @@ main {
     grid-area: main;
 }
 
+main * {
+	font-size: 20px;
+}
+
 main > h1 {
-    background-color: rgba(96, 44, 153, 0.7);
-    width: 25%;
-    text-align: center;
-    padding: 20px;
-    border-top: 10px solid rgba(227, 215, 51, 0.6);
-    border-bottom: 10px solid rgba(227, 215, 51, 0.6);
-    border-right: 10px solid rgba(227, 215, 51, 0.6);
+	text-align: left;
+	padding-left: 40px;
+	padding-top: 40px;
+	font-size: 45px;
+	color: rgba(227, 215, 51, 0.7);
+	margin: 0;
 	
+}
+
+main  hr {
+	border: none;
+	margin-bottom: 80px;
 }
 
 .list{
@@ -42,8 +50,8 @@ main > h1 {
     font-size: 15px;
     text-align: inherit;
     padding: 0;
-    border-top: 10px solid rgba(227, 215, 51, 0.6);
-    border-bottom: 10px solid rgba(227, 215, 51, 0.6);
+    border-top: 10px solid rgba(227, 215, 51, 0.7);
+    border-bottom: 10px solid rgba(227, 215, 51, 0.7);
 }
 
 .home-list{
@@ -78,6 +86,7 @@ main > h1 {
 .list h2 {
 	justify-self: stretch;
     border-bottom: 2px solid #C6C6C6; 
+	font-size: 40px;
 }
 
 
@@ -127,6 +136,10 @@ footer ul {
 	height: 100%;
 }
 
+footer * {
+	font-size: 20px;
+}
+
 ul {
 	list-style-type: none;
 }
@@ -139,8 +152,8 @@ nav ul {
 	}
 
 nav ul > li {
-	margin-top: 40px;
-	font-size: 22px;
+	margin-top: 25px;
+	font-size: 30px;
 }
 
 nav ul ul {
@@ -208,6 +221,8 @@ a {
 #prices-main > img {
     grid-area: img;
     margin-left: 40px;
+	margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 #prices-categorie {
@@ -230,6 +245,7 @@ a {
 #prices-picture {
     grid-area: img1;
     margin-left: 40px;
+	margin-bottom:20px;
 }
 
 #prices-picture2 {
@@ -320,7 +336,6 @@ a {
 
 	nav ul > li {
 		margin: 20px;
-		font-size: 22px;
 		text-align: center;
 	}
 	
@@ -332,10 +347,6 @@ a {
 	nav ul ul>li {
 		position: unset;
 		text-align:left;
-	}
-	
-	nav ul ul>li> * {
-		font-size: 16px;
 	}
 	
 	nav ul > li > a {
