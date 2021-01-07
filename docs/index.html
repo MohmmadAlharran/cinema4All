@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <title>cinema4All</title>
-	<link rel="stylesheet" href="style.css">
-	<script src="functions.js"></script>
+	<link rel="stylesheet" href="style.css"/>
   </head>
   <body onload="getMovieListForHome();">
-    <header>
-		<img src="resources/logo.svg"></img>
+    <script src="functions.js"></script>
+	<header>
+		<img src="resources/logo.svg" alt="cinema4All logo"/>
 	</header>
 	<nav>
 		<ul>
@@ -19,32 +19,35 @@
 				<a href="movies.html">Movies</a>
 			</li>
 			<li id="menu-prices"> 
-				<a href="prices.html">Prices & Gastromony</a> 
+				<a href="prices.html">Prices &amp; Gastromony</a> 
 			</li>
 			<li id="menu-events">
 				<a href="events.html">Events</a> 
 			</li>
 		</ul>
+		<div id="breadcrumb">
+			<a href="#">Home</a>  
+		</div>
 	</nav>	
 	<main>
         <div class="home-list list" id="movies-main">
 			<h2> Current Movies </h2>
-			<button id="movies-list-arrow-left" class="arrow" type="button">&larr;</button>
+			<button id="movies-list-arrow-left" class="arrow" type="button"> &#x2190; </button>
 			<ul id="movies-main-list">
 			</ul>
-			<button id="movies-list-arrow-right" class="arrow" type="button">&rarr;</button>
+			<button id="movies-list-arrow-right" class="arrow" type="button"> &#x2192; </button>
         </div>
 		
-		<hr>
+		<hr/>
 		
 		<div class="home-list list">
 			<h2>Current Events</h2>
-			<ul id="movies-main-list">
+			<ul>
 				<li>
 					<a href="#">
 						<!--<img src="resources/movie_images/joker.jpg" width="200" height="250"></img>-->
 					</a>
-					<h3>Suprise Movie</h2>
+					<h3>Suprise Movie</h3>
 					<p>See a surprise movie selected by us.</p>
 					
 				</li>
@@ -53,7 +56,6 @@
 	</main>
 	<footer>
 		<ul>
-            <li id="leer"> </li>
             <li id="FAQ">
                 <a href="faq.html">FAQ</a>
             </li>
@@ -66,7 +68,6 @@
 			<li id="Contacts"> 
                 <a href="contacts.html">Contacts</a>
             </li>
-            <li id="leer"> </li>
         </ul>
 	</footer>
   </body>

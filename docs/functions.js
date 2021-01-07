@@ -37,19 +37,35 @@ function movieListHome(start) {
 	let xmlNames = xmlData.getElementsByTagName("name");
 	let xmlImages = xmlData.getElementsByTagName("image");
 	
-	// The variable containing the html
-	let htmlMovieList = "";
-	
+	// The variables containing the html
+	let li = "";
+	let a = "";
+	let img = "";
+	let p = "";
 	// It will display four of the movies or less if there are not enough movies at start
 	let amount = Math.min(xmlNames.length - start, 4)
-	let i
+	let i;
+	
+	document.getElementById("movies-main-list").textContent = '';
+	
 	for (i = start; i < start + amount; i++) {
-		htmlMovieList += "<li>"
-							+ "<a href='#'>"				
-								+ "<img src='resources/movie_images/" + xmlImages[i].childNodes[0].nodeValue +  "' width='200' height='250'></img>"
-							+ "</a>"
-							+ "<p>" + xmlNames[i].childNodes[0].nodeValue + "</p>"
-						+ "</li>";
+		li = document.createElement('LI');
+		
+		a = document.createElement('A');
+		a.setAttribute('href', '#');
+		
+		img = document.createElement('IMG');
+		img.setAttribute('src', 'resources/movie_images/' + xmlImages[i].childNodes[0].nodeValue);
+		img.setAttribute('width','200');
+		img.setAttribute('height', '250');
+		
+		p = document.createElement('P');
+		p.appendChild(document.createTextNode(xmlNames[i].childNodes[0].nodeValue));
+		
+		document.getElementById("movies-main-list").appendChild(li);
+		li.appendChild(a);
+		li.appendChild(p);
+		a.appendChild(img);
 	}
 	
 	// Are there movies at index start + 4?
@@ -73,8 +89,6 @@ function movieListHome(start) {
 		document.getElementById("movies-list-arrow-left").setAttribute("onclick", "movieListHome(" + (start - 4) + ");");
 		document.getElementById("movies-list-arrow-left").setAttribute("style", "display:unset");
 	}
-
-	document.getElementById("movies-main-list").innerHTML = htmlMovieList;
 }
 
 //Displaying all movies and filter them depending on the parameter
@@ -83,7 +97,13 @@ function movieListMovie(filter) {
 	let xmlDescriptions = xmlData.getElementsByTagName("description");
 	let xmlVideos = xmlData.getElementsByTagName("video");
 	let xmlRelease = xmlData.getElementsByTagName("release");
-	let htmlMovieList = "";
+	
+	let li = "";
+	let a = "";
+	let h2 = "";
+	let iframe = "";
+	let div = "";
+	
 	var i ;
 	for (i = 0; i < xmlNames.length; i++) {
 		// 1 = only show top rated movies
@@ -94,14 +114,34 @@ function movieListMovie(filter) {
 			continue;
 		}
 		
-		htmlMovieList += "<li>"
-							+ "<a href='#'>"
-								+ "<h2>" + xmlNames[i].childNodes[0].nodeValue + "(" + xmlRelease[i].childNodes[0].nodeValue +  ")</h2>"
-								+ "<iframe width='560' height='315' src='" + xmlVideos[i].childNodes[0].nodeValue + "' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
-								+ "<div>" + xmlDescriptions[i].childNodes[0].nodeValue + "</div>"
-							 + "</a>"
-						+ "</li>";
+		li = document.createElement('LI');
+		
+		a = document.createElement('A');
+		a.setAttribute('href', '#');
+		
+		h2 = document.createElement('H2');
+		h2.appendChild(document.createTextNode(xmlNames[i].childNodes[0].nodeValue + "(" + xmlRelease[i].childNodes[0].nodeValue +  ")"));
+		
+		iframe = document.createElement('IFRAME');
+		iframe.setAttribute('width', '560');
+		iframe.setAttribute('height', '315');
+		iframe.setAttribute('src', xmlVideos[i].childNodes[0].nodeValue);
+		iframe.setAttribute('frameborder', 0);
+		iframe.setAttribute('allow', 'accelerometer');
+		iframe.setAttribute('autoplay', 'true');
+		iframe.setAttribute('clipboard-write', 'true');
+		iframe.setAttribute('encrypted-media', 'true');
+		iframe.setAttribute('gyroscope', 'true');
+		iframe.setAttribute('picture-in-picture', 'true');
+		iframe.setAttribute('allowfullscreen', 'true');
+		
+		div = document.createElement('DIV');
+		div.appendChild(document.createTextNode(xmlDescriptions[i].childNodes[0].nodeValue));
+		
+		document.getElementById("movies-movie-list").appendChild(li);
+		li.appendChild(a);
+		a.appendChild(h2);
+		a.appendChild(iframe);
+		a.appendChild(div);
 	}
-	
-	document.getElementById("movies-movie-list").innerHTML = htmlMovieList;
 }

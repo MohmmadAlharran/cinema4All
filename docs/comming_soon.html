@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <title>cinema4All</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css"/>
 	<script src="functions.js"></script>
   </head>
   <body onload="getMovieListForMovies(2);">
     <header>
-		<img src="resources/logo.svg"></img>
+		<img src="resources/logo.svg" alt="cinema4All logo"/>
 	</header>
 	<nav>
 		<ul>
@@ -27,12 +27,19 @@
 				</ul>
 			</li>
 			<li id="menu-prices"> 
-				<a href="prices.html">Prices & Gastromony</a> 
+				<a href="prices.html">Prices &amp; Gastromony</a> 
 			</li>
 			<li id="menu-events">
 				<a href="events.html">Events</a> 
 			</li>
 		</ul>
+		<div id="breadcrumb">
+			<a href="index.html">Home</a> 
+			/
+			<a href="movies.html">Movies</a>
+			/
+			<a href="#">Comming Soon</a> 			
+		</div>
 	</nav>	
 	<main>
         <div class="list">
@@ -42,7 +49,6 @@
 	</main>
 	<footer>
 		<ul>
-            <li id="leer"> </li>
             <li id="FAQ">
                 <a href="faq.html">FAQ</a>
             </li>
@@ -55,7 +61,6 @@
 			<li id="Contacts"> 
                 <a href="contacts.html">Contacts</a>
             </li>
-            <li id="leer"> </li>
         </ul>
 	</footer>
   </body>

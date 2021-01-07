@@ -17,7 +17,18 @@ header {
 }
 
 nav {
+	display: grid;
 	grid-area: nav;
+	grid-template:
+        "menue"
+        "breadcrumb"
+		/1fr;
+}
+
+#breadcrumb {
+	grid-area: breadcrumb;
+	align-self: end;
+	font-size: 20px;
 }
 
 main {
@@ -150,6 +161,7 @@ nav ul {
 		flex-flow: row nowrap;
 		justify-content: space-around;
 		align-items: stretch;
+		grid-area: menue;
 	}
 
 nav ul > li {
