@@ -6,30 +6,31 @@ var xmlData;
 
 // Get XML data and calling movieListHome(start)
 function getMovieListForHome() {
-	if (xmlData == undefined) {	
-		xhttp.onreadystatechange = function() {
-			if (this.readyState == 4 && this.status == 200) {
-				xmlData = this.responseXML;	
-				movieListHome(0);
-			}	
-		};
-	}
+	if (xmlData != undefined) return;
+	fetch('https://mohmmadalharran.github.io/cinema4All/resources/movies.xml').then((response)=>{
+		response.text().then((xml)=>{
+            let xmlContent = xml;
+			let parser = new DOMParser();
+			xmlData = parser.parseFromString(xmlContent, 'application/xml');
+			movieListHome(0);
+        });
+        
+    });
 }
 
 // Get XML data and calling movieListMovie(filter)
 function getMovieListForMovies(filter) {
-	if (xmlData == undefined) {	
-		xhttp.onreadystatechange = function() {
-			if (this.readyState == 4 && this.status == 200) {
-				xmlData = this.responseXML;
-				movieListMovie(filter);
-			}	
-		};
-	}
+	if (xmlData != undefined) return;
+	fetch('https://mohmmadalharran.github.io/cinema4All/resources/movies.xml').then((response)=>{
+		response.text().then((xml)=>{
+            let xmlContent = xml;
+			let parser = new DOMParser();
+			xmlData = parser.parseFromString(xmlContent, 'application/xml');
+			movieListMovie(filter);
+        });
+        
+    });
 }
-
-xhttp.open("GET", "https://mohmmadalharran.github.io/cinema4All/resources/movies.xml", true);
-xhttp.send();
 
 //Displaying the first four movies for index.html starting by the given index
 function movieListHome(start) {

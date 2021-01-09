@@ -17,19 +17,9 @@ header {
 }
 
 nav {
-	display: grid;
-	grid-area: nav;
-	grid-template:
-        "menue"
-        "breadcrumb"
-		/1fr;
+	display: block;
 }
 
-#breadcrumb {
-	grid-area: breadcrumb;
-	align-self: end;
-	font-size: 20px;
-}
 
 main {
 	width: 100%;
@@ -44,12 +34,13 @@ main > h1 {
 	text-align: left;
 	padding-left: 40px;
 	padding-top: 40px;
-	font-size: 45px;
-	color: rgba(227, 215, 51, 0.7);
 	margin: 0;
 	
 }
 
+main > h1 * {
+	color: rgba(227, 215, 51, 0.7);
+}
 main  hr {
 	border: none;
 	margin-bottom: 80px;
