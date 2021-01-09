@@ -59,6 +59,7 @@ function movieListHome(start) {
 		img.setAttribute('src', 'resources/movie_images/' + xmlImages[i].childNodes[0].nodeValue);
 		img.setAttribute('width','200');
 		img.setAttribute('height', '250');
+		img.setAttribute('alt', 'Cover ' + xmlNames[i].childNodes[0].nodeValue);
 		
 		p = document.createElement('P');
 		p.appendChild(document.createTextNode(xmlNames[i].childNodes[0].nodeValue));
