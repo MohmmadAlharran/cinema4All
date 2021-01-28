@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>cinema4All</title>
-	<link rel="stylesheet" href="style.css"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta charset="UTF-8" name="description" content="On this site there are our top rated movies. They are voted by our users. Here we will only list the best of the best."/>
+    <link rel="icon" href="favicon.svg"/>
+    <link rel="mask-icon" href="favicon.svg" color="#000000"/>
+    <link rel="apple-touch-icon" href="favicon.png"/>
+    <link rel="manifest" href="manifest.json"/>
+    <title>Top rated - cinema4All</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="functions.js"></script>
+    <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Review",
+                    "name": "toprated"
+                }
+    </script>
   </head>
   <body onload="getMovieListForMovies(1);">
 	<script src="functions.js"></script>
     <header>
-		<img src="resources/logo.svg" alt="cinema4All logo"/>
+		<img alt="cinema4All logo" src="favicon.svg" />
 	</header>
 	<nav>
 		<ul>
@@ -22,7 +35,7 @@
 						<a class="blink" href="#">Top Rated</a>
 					</li>
 					<li>
-						<a href="comming_soon.html" >Comming Soon</a>
+						<a href="comming_soon_movies.html" >Comming Soon</a>
 					</li>
 				</ul>
 			</li>

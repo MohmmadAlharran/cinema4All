@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>cinema4All</title>
-	<link rel="stylesheet" href="style.css"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta charset="UTF-8" name="description" content="All about our movies. There are action, romantic, horror, funny movies. Also there are thriller and movies for children."/>
+    <link rel="icon" href="favicon.svg"/>
+    <link rel="mask-icon" href="favicon.svg" color="#000000"/>
+    <link rel="apple-touch-icon" href="favicon.png"/>
+    <link rel="manifest" href="manifest.json"/>
+    <title>Movies - cinema4All</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="functions.js"></script>
+    <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Movie",
+                    "name": "movies"
+                }
+    </script>
   </head>
   <body onload="getMovieListForMovies(0);">
 	<script src="functions.js"></script>
     <header>
-		<img src="resources/logo.svg" alt="cinema4All logo"/>
+		<img alt="cinema4All logo" src="favicon.svg" />
 	</header>
 	<nav>
 		<ul>
@@ -19,10 +32,10 @@
 				<a class="blink" href="#">Movies</a>
 				<ul>
 					<li>
-						<a href="top_rated.html">Top Rated</a>
+						<a href="top_rated_movies.html">Top Rated</a>
 					</li>
 					<li>
-						<a href="comming_soon.html" >Comming Soon</a>
+						<a href="comming_soon_movies.html" >Comming Soon</a>
 					</li>
 				</ul>
 			</li>
