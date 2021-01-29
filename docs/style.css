@@ -20,6 +20,10 @@ nav {
 	display: block;
 }
 
+.icon {
+    display: none;
+}
+
 
 main {
 	width: 100%;
@@ -390,6 +394,43 @@ a {
         margin-left: 0;
     }
 	
+}
+
+@media screen and (max-width: 600px) {
+    .top-nav li:not(:first-child) {
+    display: none;
+  }
+    .icon {
+    display: block;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+    .top-nav.responsive li:first-child {
+        float: right;
+        width: auto;
+    }
+    .top-nav.responsive {
+        display: block;
+        position: center;
+        width: 100%;
+    }
+
+    .top-nav.responsive .icon {
+        display: flex;
+        float: right;
+        top: 0;
+    }
+
+    .top-nav.responsive {
+        visibility: visible;
+        margin-bottom: 20%;
+    }
+    
+    .top-nav.responsive li {
+        display: block;
+    }   
 }
 
 @media screen and (max-width: 566px) {

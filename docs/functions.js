@@ -18,6 +18,15 @@ function getMovieListForHome() {
     });
 }
 
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.className === "top-nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "top-nav";
+  }
+}
+
 // Get XML data and calling movieListMovie(filter)
 function getMovieListForMovies(filter) {
 	if (xmlData != undefined) return;

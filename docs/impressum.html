@@ -13,8 +13,21 @@
     <script type="application/ld+json">
                 {
                     "@context": "https://schema.org",
-                    "@type": "Organization",
-                    "name": "impressum"
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Homepage",
+                            "item": "https://tiadal.github.io/pro-students.de/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Impressum",
+                            "item": "https://tiadal.github.io/pro-students.de/impressum.html"
+                        }
+                    ]
                 }
     </script>
    </head>
@@ -23,7 +36,8 @@
 		<img alt="cinema4All logo" src="favicon.svg" />
 	</header>
     	<nav>
-		<ul>
+		<ul class="top-nav" id="myLinks">
+            <li><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a></li>
 			<li id="menu-home"> 
 				<a href="index.html">Home</a>
 			</li>
