@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initialscale=1"/>
-    <title>cinema4All</title>
-	<link rel="stylesheet" href="style.css"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta charset="UTF-8" name="description" content="The Homepage of our company. All about Cinema4All and there movies. There is an overview about all our movies."/>
+    <link rel="icon" href="favicon.svg"/>
+    <link rel="mask-icon" href="favicon.svg" color="#000000"/>
+    <link rel="apple-touch-icon" href="favicon.png"/>
+    <link rel="manifest" href="manifest.json"/>
+    <title>Homepage - cinema4All</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="functions.js"></script>
+    <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    "name": "cinema4All",
+                    "url": "https://mohmmadalharran.github.io/cinema4All/index.html",
+                    "logo": "https://github.com/MohmmadAlharran/cinema4All/blob/develop/docs/favicon.png"
+                }
+    </script>
   </head>
   <body onload="getMovieListForHome();">
     <script src="functions.js"></script>
 	<header>
-		<img src="resources/logo.svg" alt="cinema4All logo"/>
+		<img alt="cinema4All logo" src="favicon.svg" />
 		<nav>
-			<ul>
-				<li id="menu-home"> 
-					<a class="blink" href="#">Home</a>
-				</li>
-				<li id="menu-movies"> 
-					<a href="movies.html">Movies</a>
-				</li>
-				<li id="menu-prices"> 
-					<a href="prices.html">Prices &amp; Gastromony</a> 
-				</li>
-				<li id="menu-events">
-					<a href="events.html">Events</a> 
-				</li>
-			</ul>
+		<ul class="top-nav" id="myLinks">
+            <li><a href="javascript:void(0);" class="icon" onclick="collapseMenue()">&#9776;</a></li>
+			<li id="menu-home"> 
+				<a class="blink" href="#">Home</a>
+			</li>
+			<li id="menu-movies"> 
+				<a href="movies.html">Movies</a>
+			</li>
+			<li id="menu-prices"> 
+				<a href="prices.html">Prices &amp; Gastromony</a> 
+			</li>
+			<li id="menu-events">
+				<a href="events.html">Events</a> 
+			</li>
+		</ul>
 		</nav>	
 	</header>
 	<main>

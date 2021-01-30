@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initialscale=1"/>
-    <title>cinema4All</title>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta charset="UTF-8" name="description" content="A little overview about our contacts where you can get in contact with us all day. So there is our email, number and address."/>
+    <link rel="icon" href="favicon.svg"/>
+    <link rel="mask-icon" href="favicon.svg" color="#000000"/>
+    <link rel="apple-touch-icon" href="favicon.png"/>
+    <link rel="manifest" href="manifest.json"/>
+    <title>Contacts - cinema4All</title>
 	<link rel="stylesheet" href="style.css" />
 	<script src="functions.js"></script>
+    <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type" : "LocalBusiness",
+                  "name" : "cinema4All",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Cottbus",
+                    "addressRegion": "Brandenburg",
+                    "addressCountry": "DE"
+                  },
+                  "email" : "contact@cinema4all.de",
+                  "image" : "https://github.com/MohmmadAlharran/cinema4All/blob/develop/docs/favicon.svg",
+                  "url" : "https://mohmmadalharran.github.io/cinema4All/index.html"
+                }
+    </script>
    </head>
   <body>
       <header>
-		<img alt="cinema4All logo" src="resources/logo.svg" />
-		<nav>
-			<ul>
-				<li id="menu-home"> 
-					<a href="index.html">Home</a>
-				</li>
-				<li id="menu-movies"> 
-					<a href="movies.html">Movies</a>
-				</li>
-				<li id="menu-prices"> 
-					<a href="prices.html">Prices &amp; Gastromony</a> 
-				</li>
-				<li id="menu-events">
-					<a href="events.html">Events</a> 
-				</li>
-			</ul>
-		</nav>	
+		<img alt="cinema4All logo" src="favicon.svg" />
+		 <nav>
+		<ul class="top-nav responsive" id="myLinks">
+            <li><a href="javascript:void(0);" class="icon" onclick="collapseMenue()">&#9776;</a></li>
+			<li id="menu-home"> 
+				<a href="index.html">Home</a>
+			</li>
+			<li id="menu-movies"> 
+				<a href="movies.html">Movies</a>
+			</li>
+			<li id="menu-prices"> 
+				<a href="prices.html">Prices &amp; Gastromony</a> 
+			</li>
+			<li id="menu-events">
+				<a href="events.html">Events</a> 
+			</li>
+		</ul>
+		</nav>
 	</header>
 	<main>
 		<h1>cinema4All</h1>

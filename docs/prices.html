@@ -1,42 +1,74 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initialscale=1"/>
-    <title>cinema4All</title>
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8" name="description" content="All about the prices for movies, food and drinks for out cinema. There are different prices for children and adults."/>
+    <link rel="icon" href="favicon.svg"/>
+    <link rel="mask-icon" href="favicon.svg" color="#000000"/>
+    <link rel="apple-touch-icon" href="favicon.png"/>
+    <link rel="manifest" href="manifest.json"/>
+    <title>Prices - cinema4All</title>
 	<link rel="stylesheet" href="style.css" />
 	<script src="functions.js"></script>
+    <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Homepage",
+                            "item": "https://mohmmadalharran.github.io/cinema4All/index.html"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Movies",
+                            "item": "https://mohmmadalharran.github.io/cinema4All/movies.html"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Events",
+                            "item": "https://tiadal.github.io/pro-students.de/events.html"
+                        }
+                    ]
+                }
+    </script>
    </head>
   <body>
       <header>
-		<img alt="cinema4All logo" src="resources/logo.svg" />
+		<img alt="cinema4All logo" src="favicon.svg" />
 		<nav>
-			<ul>
-				<li id="menu-home"> 
-					<a href="index.html">Home</a>
-				</li>
-				<li id="menu-movies"> 
-					<a href="movies.html">Movies</a>
-				</li>
-				<li id="menu-prices"> 
-					<a class="blink" href="prices.html">Prices &amp; Gastromony</a> 
-				</li>
-				<li id="menu-events">
-					<a href="events.html">Events</a> 
-				</li>
-			</ul>
-		</nav>
-	</header>	
+		<ul class="top-nav" id="myLinks">
+            <li><a href="javascript:void(0);" class="icon" onclick="collapseMenue()">&#9776;</a></li>
+			<li id="menu-home"> 
+				<a href="index.html">Home</a>
+			</li>
+			<li id="menu-movies"> 
+				<a href="movies.html">Movies</a>
+			</li>
+			<li id="menu-prices"> 
+				<a class="blink" href="prices.html">Prices &amp; Gastromony</a> 
+			</li>
+			<li id="menu-events">
+				<a href="events.html">Events</a> 
+			</li>
+		</ul>
+	</nav>	
+	</header>
 	<main>
 		<h1>cinema4All</h1>
-		<h2>Prices &amp; Gastromony</h2>
+		<h2>Prices</h2>
 		<div id="breadcrumb">
 			<a href="index.html">Home</a> 
 			/
 			<a href="#">Prices &amp; Gastronomy</a> 			
 		</div>
         <div class="list" id="prices-main">
-        <h3> Prices</h3>
+        <h3> Tickets</h3>
             <img src="resources/Gastronomy/popcorn_2.jpeg" alt="Popcorn with a Drink" width="300" height="250" />
         <div id="prices-categorie" ><h3>Categorie (Price)</h3>
              <p>Adult (10€)</p>

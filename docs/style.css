@@ -22,6 +22,10 @@ header img {
 	grid-area: logo;
 }
 
+.icon {
+    display: none;
+}
+
 main {
 	width: 100%;
 }
@@ -186,6 +190,7 @@ nav ul {
 		flex-flow: row nowrap;
 		justify-content: space-around;
 		align-items: stretch;
+		padding-left: 0;
 	}
 
 nav ul > li {
@@ -399,8 +404,11 @@ a {
 		justify-content: space-between;	
 		align-items: center;
 		height: 200px;
+		padding-left: 0;
 	}
-    
+    h1 {
+		font-size: 70px;
+	}
 	h3 {
 		font-size: 50px;
 	}
@@ -419,6 +427,33 @@ a {
     
     #prices-picture, #prices-picture2 {
         margin-left: 0;
+    }
+	
+	.top-nav li:not(:first-child) {
+    display: none;
+  }
+    .icon {
+    display: block;
+	font-size: 60px;
+  }
+ 
+    .top-nav.responsive {
+        position: center;
+    }
+
+    .top-nav.responsive .icon {
+        display: flex;
+        float: right;
+        top: 0;
+    }
+
+    .top-nav.responsive {
+        visibility: visible;
+        margin-bottom: 20%;
+    }
+    
+    .top-nav.responsive li {
+        display: block;
     }
 	
 }

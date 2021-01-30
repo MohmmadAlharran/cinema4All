@@ -2,18 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
 	<meta name="viewport" content="width=device-width, initialscale=1"/>
-	<meta name="theme-color" content="#ffffff"/>
-    <meta charset="UTF-8" name="description" content="On this site there are our top rated movies. They are voted by our users. Here we will only list the best of the best."/>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta charset="UTF-8" name="description" content="Here you will find all movies which will comming up soon at our cinema. So you can find the movies you are looking for."/>
     <link rel="icon" href="favicon.svg"/>
     <link rel="mask-icon" href="favicon.svg" color="#000000"/>
     <link rel="apple-touch-icon" href="favicon.png"/>
     <link rel="manifest" href="manifest.json"/>
-    <title>Top rated - cinema4All</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="functions.js"></script>
+    <title>Comming soon - cinema4All</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="functions.js"></script>
     <script type="application/ld+json">
                 {
-                    "@context": "https://schema.org/",
+                    "@context": "https://schema.org",
                     "@type": "BreadcrumbList",
                     "itemListElement": [
                         {
@@ -31,57 +31,54 @@
                         {
                             "@type": "ListItem",
                             "position": 3,
-                            "name": "Comming Soon",
-                            "item": "https://tiadal.github.io/pro-students.de/comming_soon_movies.html"
+                            "name": "Top rated",
+                            "item": "https://tiadal.github.io/pro-students.de/top_rated_movies.html"
                         }
                     ]
                 }
     </script>
   </head>
-  <body onload="getMovieListForMovies(1);">
-	<script src="functions.js"></script>
+  <body onload="getMovieListForMovies(2);">
     <header>
-		<img src="resources/logo.svg" alt="cinema4All logo"/>
+		<img alt="cinema4All logo" src="favicon.svg" />
 		<nav>
-			<ul>
-				<li id="menu-home"> 
-					<a href="index.html">Home</a>
-				</li>
-				<li id="menu-movies"> 
-					<a href="movies.html">Movies</a>
-					<ul>
-						<li>
-							<a class="blink" href="#">Top Rated</a>
-						</li>
-						<li>
-							<a href="comming_soon.html" >Comming Soon</a>
-						</li>
-					</ul>
-				</li>
-				<li id="menu-prices"> 
-					<a href="prices.html">Prices &amp; Gastromony</a> 
-				</li>
-				<li id="menu-events">
-					<a href="events.html">Events</a> 
-				</li>
-			</ul>
-	</nav>	
+		<ul class="top-nav" id="myLinks">
+            <li><a href="javascript:void(0);" class="icon" onclick="collapseMenue()">&#9776;</a></li>
+			<li id="menu-home"> 
+				<a href="index.html">Home</a>
+			</li>
+			<li id="menu-movies"> 
+				<a href="movies.html">Movies</a>
+				<ul>
+					<li>
+						<a href="top_rated_movies.html" >Top Rated</a>
+					</li>
+					<li>
+						<a class="blink" href="#">Comming Soon</a>
+					</li>
+				</ul>
+			</li>
+			<li id="menu-prices"> 
+				<a href="prices.html">Prices &amp; Gastromony</a> 
+			</li>
+			<li id="menu-events">
+				<a href="events.html">Events</a> 
+			</li>
+		</ul>
+		</nav>	
 	</header>
 	<main>
 		<h1>cinema4All</h1>
-		<h2>Top Rated</h2>
+		<h2>Comming Soon</h2>
 		<div id="breadcrumb">
 			<a href="index.html">Home</a> 
 			/
 			<a href="movies.html">Movies</a>
 			/
-			<a href="#">Top Rated</a> 			
+			<a href="#">Comming Soon</a> 			
 		</div>
         <div class="list">
 			<ul id="movies-movie-list">
-				<noscript>
-					Please enable JavaScript to view all movies.
-				</noscript>
 			</ul>
         </div>
 	</main>
