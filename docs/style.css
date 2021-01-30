@@ -430,10 +430,10 @@ a {
     }
 	
 	.top-nav li:not(:first-child) {
-    display: none;
+    display: flex;
   }
     .icon {
-    display: block;
+    display: flex;
 	font-size: 60px;
   }
  
@@ -446,14 +446,9 @@ a {
         float: right;
         top: 0;
     }
-
-    .top-nav.responsive {
-        visibility: visible;
-        margin-bottom: 20%;
-    }
     
-    .top-nav.responsive li {
-        display: block;
+    .top-nav.responsive li:not(:first-child) {
+        display: none;
     }
 	
 }
