@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initialscale=1"/>
     <title>cinema4All</title>
 	<link rel="stylesheet" href="style.css"/>
   </head>
@@ -9,46 +10,70 @@
     <script src="functions.js"></script>
 	<header>
 		<img src="resources/logo.svg" alt="cinema4All logo"/>
+		<nav>
+			<ul>
+				<li id="menu-home"> 
+					<a class="blink" href="#">Home</a>
+				</li>
+				<li id="menu-movies"> 
+					<a href="movies.html">Movies</a>
+				</li>
+				<li id="menu-prices"> 
+					<a href="prices.html">Prices &amp; Gastromony</a> 
+				</li>
+				<li id="menu-events">
+					<a href="events.html">Events</a> 
+				</li>
+			</ul>
+		</nav>	
 	</header>
-	<nav>
-		<ul>
-			<li id="menu-home"> 
-				<a class="blink" href="#">Home</a>
-			</li>
-			<li id="menu-movies"> 
-				<a href="movies.html">Movies</a>
-			</li>
-			<li id="menu-prices"> 
-				<a href="prices.html">Prices &amp; Gastromony</a> 
-			</li>
-			<li id="menu-events">
-				<a href="events.html">Events</a> 
-			</li>
-		</ul>
-	</nav>	
 	<main>
+		<h1>cinema4All</h1>
+		<h2>Home</h2>
 		<div id="breadcrumb">
 			<a href="#">Home</a>
 		</div>
+		
         <div class="home-list list" id="movies-main">
-			<h2> Current Movies </h2>
+			<h3> Current Movies </h3>
 			<button id="movies-list-arrow-left" class="arrow" type="button"> &#x2190; </button>
 			<ul id="movies-main-list">
+				<li>
+					<a>
+						<img src="resources/movie_images/joker.jpg" alt="Cover Joker" width="200px" height="250px">
+					</a>
+					<p>Joker</p>
+				</li>
+				<li>
+					<a>
+						<img src="resources/movie_images/StarWars.jpeg" alt="Cover Star Wars" width="200px" height="250px">
+					</a>
+					<p>Star Wars</p>
+				</li>
+				<li>
+					<a>
+						<img src="resources/movie_images/titanic.jpg" alt="Cover Titanic" width="200px" height="250px">
+					</a>
+					<p>Titanic</p>
+				</li>
 			</ul>
+			<noscript>
+					Please enable JavaScript to view all movies.
+			</noscript>
 			<button id="movies-list-arrow-right" class="arrow" type="button"> &#x2192; </button>
         </div>
 		
 		<hr/>
 		
 		<div class="home-list list">
-			<h2>Current Events</h2>
+			<h3>Current Events</h3>
 			<ul>
 				<li>
-					<a href="#">
-						<!--<img src="resources/movie_images/joker.jpg" width="200" height="250"></img>-->
-					</a>
-					<h3>Suprise Movie</h3>
-					<p>See a surprise movie selected by us.</p>
+					<!--<a href="Events.html">
+						<img src="resources/movie_images/joker.jpg" width="200" height="250"></img>
+					</a>-->
+						<h4>Suprise Movie</h4>
+						<p>See a surprise movie selected by us.</p>
 					
 				</li>
 			</ul>

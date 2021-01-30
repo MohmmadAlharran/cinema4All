@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initialscale=1"/>
     <title>cinema4All</title>
 	<link rel="stylesheet" href="style.css"/>
   </head>
@@ -9,32 +10,34 @@
 	<script src="functions.js"></script>
     <header>
 		<img src="resources/logo.svg" alt="cinema4All logo"/>
-	</header>
-	<nav>
-		<ul>
-			<li id="menu-home"> 
-				<a href="index.html">Home</a>
-			</li>
-			<li id="menu-movies"> 
-				<a href="movies.html">Movies</a>
-				<ul>
-					<li>
-						<a class="blink" href="#">Top Rated</a>
-					</li>
-					<li>
-						<a href="comming_soon.html" >Comming Soon</a>
-					</li>
-				</ul>
-			</li>
-			<li id="menu-prices"> 
-				<a href="prices.html">Prices &amp; Gastromony</a> 
-			</li>
-			<li id="menu-events">
-				<a href="events.html">Events</a> 
-			</li>
-		</ul>
+		<nav>
+			<ul>
+				<li id="menu-home"> 
+					<a href="index.html">Home</a>
+				</li>
+				<li id="menu-movies"> 
+					<a href="movies.html">Movies</a>
+					<ul>
+						<li>
+							<a class="blink" href="#">Top Rated</a>
+						</li>
+						<li>
+							<a href="comming_soon.html" >Comming Soon</a>
+						</li>
+					</ul>
+				</li>
+				<li id="menu-prices"> 
+					<a href="prices.html">Prices &amp; Gastromony</a> 
+				</li>
+				<li id="menu-events">
+					<a href="events.html">Events</a> 
+				</li>
+			</ul>
 	</nav>	
+	</header>
 	<main>
+		<h1>cinema4All</h1>
+		<h2>Top Rated</h2>
 		<div id="breadcrumb">
 			<a href="index.html">Home</a> 
 			/
@@ -44,6 +47,9 @@
 		</div>
         <div class="list">
 			<ul id="movies-movie-list">
+				<noscript>
+					Please enable JavaScript to view all movies.
+				</noscript>
 			</ul>
         </div>
 	</main>

@@ -1,7 +1,3 @@
-// Request for the XML data via HTTP
-var xhttp = new XMLHttpRequest();
-
-// Stores the requested XML data
 var xmlData;
 
 // Get XML data and calling movieListHome(start)
@@ -81,7 +77,7 @@ function movieListHome(start) {
 		document.getElementById("movies-list-arrow-right").setAttribute("style", "display:none");
 	}
 	
-	// Are at he beginning of the list?
+	// Are we at he beginning of the list?
 	if (start < 4) {
 		// Left arrow button is not needed
 		document.getElementById("movies-list-arrow-left").setAttribute("onclick", "");
@@ -102,11 +98,14 @@ function movieListMovie(filter) {
 	
 	let li = "";
 	let a = "";
-	let h2 = "";
+	let h3 = "";
 	let iframe = "";
 	let div = "";
 	
 	var i ;
+	
+	document.getElementById("movies-movie-list").textContent="";
+	
 	for (i = 0; i < xmlNames.length; i++) {
 		// 1 = only show top rated movies
 		if (filter == 1 && xmlData.getElementsByTagName("movie")[i].getAttribute("info") != "top") {
@@ -121,8 +120,8 @@ function movieListMovie(filter) {
 		a = document.createElement('A');
 		a.setAttribute('href', '#');
 		
-		h2 = document.createElement('H2');
-		h2.appendChild(document.createTextNode(xmlNames[i].childNodes[0].nodeValue + "(" + xmlRelease[i].childNodes[0].nodeValue +  ")"));
+		h3 = document.createElement('h3');
+		h3.appendChild(document.createTextNode(xmlNames[i].childNodes[0].nodeValue + "(" + xmlRelease[i].childNodes[0].nodeValue +  ")"));
 		
 		iframe = document.createElement('IFRAME');
 		iframe.setAttribute('width', '560');
@@ -142,7 +141,7 @@ function movieListMovie(filter) {
 		
 		document.getElementById("movies-movie-list").appendChild(li);
 		li.appendChild(a);
-		a.appendChild(h2);
+		a.appendChild(h3);
 		a.appendChild(iframe);
 		a.appendChild(div);
 	}

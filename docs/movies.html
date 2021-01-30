@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initialscale=1"/>
     <title>cinema4All</title>
 	<link rel="stylesheet" href="style.css"/>
   </head>
@@ -9,32 +10,34 @@
 	<script src="functions.js"></script>
     <header>
 		<img src="resources/logo.svg" alt="cinema4All logo"/>
-	</header>
-	<nav>
-		<ul>
-			<li id="menu-home"> 
-				<a href="index.html">Home</a>
-			</li>
-			<li id="menu-movies"> 
-				<a class="blink" href="#">Movies</a>
-				<ul>
-					<li>
-						<a href="top_rated.html">Top Rated</a>
-					</li>
-					<li>
-						<a href="comming_soon.html" >Comming Soon</a>
-					</li>
-				</ul>
-			</li>
-			<li id="menu-prices"> 
-				<a href="prices.html">Prices &amp; Gastromony</a> 
-			</li>
-			<li id="menu-events">
-				<a href="events.html">Events</a> 
-			</li>
-		</ul>
-	</nav>	
+		<nav>
+			<ul>
+				<li id="menu-home"> 
+					<a href="index.html">Home</a>
+				</li>
+				<li id="menu-movies"> 
+					<a class="blink" href="#">Movies</a>
+					<ul>
+						<li>
+							<a href="top_rated.html">Top Rated</a>
+						</li>
+						<li>
+							<a href="comming_soon.html" >Comming Soon</a>
+						</li>
+					</ul>
+				</li>
+				<li id="menu-prices"> 
+					<a href="prices.html">Prices &amp; Gastromony</a> 
+				</li>
+				<li id="menu-events">
+					<a href="events.html">Events</a> 
+				</li>
+			</ul>
+		</nav>
+	</header>	
 	<main>
+		<h1>cinema4All</h1>
+		<h2>All Movies</h2>
 		<div id="breadcrumb">
 			<a href="index.html">Home</a> 
 			/
@@ -42,6 +45,36 @@
 		</div>
         <div class="list">
 			<ul id="movies-movie-list">
+				<noscript>
+					Please enable JavaScript to view all movies.
+				</noscript>
+				<li>
+					<a>
+						<h3>Joker ( 2019 )</h3>
+						<iframe src="https://www.youtube.com/embed/zAGVQLHvwOY" allow="accelerometer" autoplay="true" clipboard-write="true" encrypted-media="true" gyroscope="true" picture-in-picture="true" allowfullscreen="true" width="560" height="315" frameborder="0"></iframe>
+						<div>
+							In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker. 
+						</div>
+					</a>
+				</li>
+				<li>
+					<a>
+						<h3>Star Wars: The Rise of the Skywalker( 2019 )</h3>
+						<iframe src="https://www.youtube.com/embed/8Qn_spdM5Zg" allow="accelerometer" autoplay="true" clipboard-write="true" encrypted-media="true" gyroscope="true" picture-in-picture="true" allowfullscreen="true" width="560" height="315" frameborder="0"></iframe>
+						<div>
+								The surviving members of the resistance face the First Order once again, and the legendary conflict between the Jedi and the Sith reaches its peak bringing the Skywalker saga to its end. 
+						</div>
+					</a>
+				</li>
+				<li>
+					<a>
+						<h3>Titanic ( 1997 )</h3>
+						<iframe src="https://www.youtube.com/embed/kVrqfYjkTdQ" allow="accelerometer" autoplay="true" clipboard-write="true" encrypted-media="true" gyroscope="true" picture-in-picture="true" allowfullscreen="true" width="560" height="315" frameborder="0"></iframe>
+						<div>
+							A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic. 
+						</div>
+					</a>
+				</li>
 			</ul>
         </div>
 	</main>

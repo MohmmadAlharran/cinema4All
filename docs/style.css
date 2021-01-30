@@ -1,33 +1,50 @@
 body {
 	color: #C6C6C6;
-	font-family: Arial;
+	font-family: Arial, sans-serif;
 	background-color: black;
-	display: grid;
-	grid-template-columns: 1fr 6fr;
-	grid-template-areas:
-		"header nav"
-		"main main" 
-		"footer footer";
 	margin:0;
 }
 
+*:focus {
+	border: 2px solid rgba(227, 215, 51, 1);
+}
 
 header {
-	grid-area: header;
+	display: grid;
+	grid-template:
+		"logo nav"
+		"name ."
+		/1fr 6fr;
+	margin-bottom: 50px;
 }
 
-nav {
-	display: block;
+header img {
+	grid-area: logo;
 }
-
 
 main {
 	width: 100%;
-    grid-area: main;
 }
 
 main * {
 	font-size: 20px;
+}
+
+h1 {
+	padding-left: 10px;
+	font-size: 70px;
+	margin-bottom: 60px;
+	border-bottom: 10px solid rgba(227, 215, 51, 0.7);
+}
+
+main > h2 {
+	display: inline;
+	background-color: rgba(96, 44, 153, 0.7);
+	padding: 15px 30px;
+	font-size: 60px;
+	margin-top: 29px;
+	border: 10px solid rgba(227, 215, 51, 0.7);
+	border-left: none;
 }
 
 #breadcrumb {
@@ -39,8 +56,9 @@ main * {
 }
 
 #breadcrumb * {
-	color: rgba(227, 215, 51, 0.7);
+	color: rgba(227, 215, 51, 0.8);
 }
+
 main  hr {
 	border: none;
 	margin-bottom: 80px;
@@ -55,12 +73,24 @@ main  hr {
     border-top: 10px solid rgba(227, 215, 51, 0.7);
     border-bottom: 10px solid rgba(227, 215, 51, 0.7);
 }
+.list > span {
+	display: block;
+	margin: 0 auto;
+	grid-area: noscript;
+	font-size: 30px;
+}
+
+.list > ul > span {
+	display: block;
+	font-size: 30px;
+}
 
 .home-list{
     display: grid;
     grid-template:
         ". movies-main-title ."
         "movies-main-buttonl movies-main-list movies-main-buttonr"
+		"noscript noscript noscript"
 		/1fr 6fr 1fr;
     place-items: center center;
 	margin-bottom: 20px;
@@ -70,10 +100,11 @@ main  hr {
 	background-color: rgba(96, 44, 153, 0.0);
     border: none;
     color: #E3D733;
-    font-size: 4em;
+    font-size: 60px;
     text-align: center;
     cursor: pointer;
 	font-weight: bold;
+	display:none;
 }
 
 #movies-list-arrow-left {
@@ -81,11 +112,15 @@ main  hr {
     
 }
 
-.home-list>h2 {
+#movies-main-list a {
+	display: block;
+}
+
+.home-list>h3 {
 	grid-area: movies-main-title;
 }
 
-.list h2 {
+.list h3 {
 	justify-self: stretch;
     border-bottom: 2px solid #C6C6C6; 
 	font-size: 40px;
@@ -104,7 +139,7 @@ main  hr {
 	grid-area: movies-main-buttonr;
     
 }
-.home-list>ul>li>h3 {
+.home-list>ul>li>h4 {
 	text-align: center;
 }
 
@@ -120,14 +155,10 @@ main  hr {
 
 ul > li > p {
     text-align: center; 
-    margin: 0; 
+    margin: 0 auto; 
     padding-top: 10px;
 	padding-bottom: 10px;
 	width: 200px;
-}
-
-footer {
-	grid-area: footer;
 }
 
 footer ul {
@@ -146,12 +177,15 @@ ul {
 	list-style-type: none;
 }
 
+nav {
+	grid-area: nav;
+}
+
 nav ul {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: space-around;
 		align-items: stretch;
-		grid-area: menue;
 	}
 
 nav ul > li {
@@ -196,7 +230,7 @@ a {
 		/ 1fr 2fr;
 	column-gap: 10px;
 }
-#movies-movie-list>li>a>h2 {
+#movies-movie-list>li>a>h3 {
 	grid-area: title;
 }
 	
@@ -217,7 +251,7 @@ a {
     column-gap: 10px;
 }
 
-#prices-main > h2 {
+#prices-main > h3 {
     grid-area: title;
 }
 
@@ -241,7 +275,7 @@ a {
     column-gap: 10px;
 }
 
-#prices-main2 > h2 {
+#prices-main2 > h3 {
     grid-area: title;
 }
 
@@ -272,7 +306,7 @@ a {
         /1fr 1fr;
 }
 
-#events-main > h2 {
+#events-main > h3 {
     grid-area: title
 }
 
@@ -286,17 +320,26 @@ a {
     font-size: 18px;
 }
 
-#prices-main>h2, #prices-main2>h2, #events-main>h2, #events {
+#prices-main>h3, #prices-main2>h3, #events-main>h3, #events {
 	margin-left: 40px;
 	margin-right: 40px;
 }
 
-@media screen and (max-width: 1500px) {
-	main > h1 {
-		width: 50%;
+@media screen and (max-width: 1200px) {
+	header {
+		display: grid;
+		grid-template:
+			"logo" 
+			"nav"
+			/1fr;
 	}
-}
-@media screen and (max-width: 900px) {
+	header img {
+		margin: 0 auto;
+	}
+	
+	footer ul *, main * {
+		font-size: 30px;
+	}
 	
 	#movies-movie-list>li>a {
 		display: grid;
@@ -314,20 +357,7 @@ a {
 		margin: 0 auto;
 		
 	}
-
-	body {
-		grid-template-columns: 1fr;
-		grid-template-areas:
-		"header"
-		"nav"
-		"main" 
-		"footer";
-		justify-items: center;
-	}
 	
-	main > h1 {
-		width: 75%
-	}
 	
 	nav ul {
 		display: flex;
@@ -340,6 +370,7 @@ a {
 	nav ul > li {
 		margin: 20px;
 		text-align: center;
+		font-size: 40px;
 	}
 	
 	nav ul ul  {
@@ -369,11 +400,11 @@ a {
 		align-items: center;
 		height: 200px;
 	}
-	
-	footer ul * {
-		font-size: 18px;
-	}
     
+	h3 {
+		font-size: 50px;
+	}
+	
     #prices-main2 {
         display: grid;
         grid-template: 
