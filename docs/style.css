@@ -373,7 +373,7 @@ a {
 	
 	nav ul ul  {
 		position: relative;
-		margin-left: 180px;
+		left:47px;
 	}
 	
 	nav ul ul>li {
