@@ -426,10 +426,6 @@ a {
     display: flex;
 	font-size: 60px;
   }
- 
-    .top-nav.responsive {
-        position: center;
-    }
 
     .top-nav.responsive .icon {
         display: flex;
