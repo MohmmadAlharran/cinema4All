@@ -126,9 +126,6 @@ function movieListMovie(filter) {
 		
 		li = document.createElement('LI');
 		
-		a = document.createElement('A');
-		a.setAttribute('href', '#');
-		
 		h3 = document.createElement('h3');
 		h3.appendChild(document.createTextNode(xmlNames[i].childNodes[0].nodeValue + "(" + xmlRelease[i].childNodes[0].nodeValue +  ")"));
 		
@@ -149,9 +146,8 @@ function movieListMovie(filter) {
 		div.appendChild(document.createTextNode(xmlDescriptions[i].childNodes[0].nodeValue));
 		
 		document.getElementById("movies-movie-list").appendChild(li);
-		li.appendChild(a);
-		a.appendChild(h3);
-		a.appendChild(iframe);
-		a.appendChild(div);
+		li.appendChild(h3);
+		li.appendChild(iframe);
+		li.appendChild(div);
 	}
 }
